@@ -6,7 +6,7 @@
 
 <!-- Developers Google AI -->
 
-[![Google GenAI](https://img.shields.io/badge/google--genai-%5E1.19.0-orange)](https://developers.google.com/)
+[![Google GenAI](https://img.shields.io/badge/google--genai-%5E-orange)](https://developers.google.com/)
 
 <!-- HTML & CSS -->
 
@@ -15,7 +15,7 @@
 
 <!-- Styling / PostCSS -->
 
-[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%5E3.4.14-teal)](https://tailwindcss.com/)
+[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%5E-teal)](https://tailwindcss.com/)
 [![PostCSS](https://img.shields.io/badge/PostCSS-efefef?logo=postcss\&logoColor=black)](https://postcss.org/)
 [![daisyUI](https://img.shields.io/badge/daisyUI-5A0EF8?logo=tailwindcss\&logoColor=white)](https://daisyui.com/)
 
@@ -35,7 +35,7 @@
 
 [![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js\&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-000000?logo=express\&logoColor=white)](https://expressjs.com/)
-[![React](https://img.shields.io/badge/react-19.1.1-blue)](https://reactjs.org/)
+[![React](https://img.shields.io/badge/react-blue)](https://reactjs.org/)
 
 <!-- Linting & Formatting -->
 
@@ -44,7 +44,7 @@
 
 <!-- Bundler -->
 
-[![Vite](https://img.shields.io/badge/vite-%5E6.2.0-yellow)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/vite-%5E-yellow)](https://vitejs.dev/)
 
 ## Plain docs links
 
