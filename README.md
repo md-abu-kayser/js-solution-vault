@@ -1,12 +1,12 @@
-# JS SolutionVault
+# JS SolutionVault - 136+ JavaScript & TypeScript Problems (Solved & Explained)
 
-High-quality, searchable library of JavaScript/TypeScript problem solutions and interactive examples — built with React, TypeScript and Vite. Designed as a developer-focused reference and learning playground for solving, explaining and testing 200+ algorithmic and utility problems with clear explanations and live solvers.
+High-quality, searchable library of JavaScript/TypeScript problem solutions and interactive examples - built with React, TypeScript and Vite. Designed as a developer-focused reference and learning playground for solving, explaining and testing 200+ algorithmic and utility problems with clear explanations and live solvers.
 
 ---
 
 ## Key highlights
 
-- **Purpose:** A polished vault of categorized coding problems, explanations, and solved implementations — ideal for interview prep, learning and demoing modern JavaScript/TypeScript patterns.
+- **Purpose:** A polished vault of categorized coding problems, explanations, and solved implementations - ideal for interview prep, learning and demoing modern JavaScript/TypeScript patterns.
 - **Tech stack:** React, TypeScript, Vite, Google GenAI client (optional experimental features), and a small modular `problems` library.
 - **Dev-first:** Fast local dev server, lightweight build, modular components, and a clear file layout to extend or ship new problem categories.
 
@@ -31,7 +31,7 @@ High-quality, searchable library of JavaScript/TypeScript problem solutions and 
 
 Prerequisites:
 
-- Node.js 18+ (or latest LTS)
+- Node.js
 - npm or pnpm/yarn
 
 Install dependencies and run locally:
@@ -50,7 +50,7 @@ npm run build
 npm run preview
 ```
 
-Notes:
+**Notes:**
 
 - This project uses TypeScript + Vite for fast iteration and small bundles.
 - The repository contains a small service wrapper at [src/services/geminiService.ts](src/services/geminiService.ts) for experimental GenAI integrations.
@@ -61,9 +61,9 @@ Notes:
 
 Scripts available in this repo (from `package.json`):
 
-- `dev` — runs the Vite dev server (`vite`).
-- `build` — creates a production build (`vite build`).
-- `preview` — serves the production build locally for previewing (`vite preview`).
+- `dev` - runs the Vite dev server (`vite`).
+- `build` - creates a production build (`vite build`).
+- `preview` - serves the production build locally for previewing (`vite preview`).
 
 Use `npm run <script>` to execute any of the above commands.
 
@@ -75,28 +75,28 @@ If you add linters, formatters, or tests, include them here as additional npm sc
 
 Top-level important files:
 
-- [App.tsx](App.tsx) — main application container and routes.
-- [index.tsx](index.tsx) — React entry point.
-- [vite.config.ts](vite.config.ts) — Vite configuration.
-- [tsconfig.json](tsconfig.json) — TypeScript configuration.
+- [App.tsx](App.tsx) - main application container and routes.
+- [index.tsx](index.tsx) - React entry point.
+- [vite.config.ts](vite.config.ts) - Vite configuration.
+- [tsconfig.json](tsconfig.json) - TypeScript configuration.
 
 Source layout (src):
 
-- `src/components/` — UI components and reusable parts:
+- `src/components/` - UI components and reusable parts:
   - [Header.tsx](src/components/Header.tsx)
   - [Footer.tsx](src/components/Footer.tsx)
   - [ProblemGrid.tsx](src/components/ProblemGrid.tsx)
   - [ProblemCard.tsx](src/components/ProblemCard.tsx)
   - [MarkdownRenderer.tsx](src/components/MarkdownRenderer.tsx)
   - [ThemeSwitcher.tsx](src/components/ThemeSwitcher.tsx)
-  - `icons/` — shared SVG icons
-- `src/hooks/` — small utilities like `useDebounce.ts`
-- `src/problems/` — the problem library, organized by topic
+  - `icons/` - shared SVG icons
+- `src/hooks/` - small utilities like `useDebounce.ts`
+- `src/problems/` - the problem library, organized by topic
   - each topic folder (e.g. `arrays`, `strings`, `advanced`) contains:
-    - `problems.ts` — problem definitions and metadata
-    - `solvers.ts` — canonical solution implementations
-    - `explanations.ts` — natural-language explanations and tips
-- `src/services/` — lightweight API/service wrappers (e.g. `geminiService.ts`)
+    - `problems.ts` - problem definitions and metadata
+    - `solvers.ts` - canonical solution implementations
+    - `explanations.ts` - natural-language explanations and tips
+- `src/services/` - lightweight API/service wrappers (e.g. `geminiService.ts`)
 
 This structure keeps UI, domain logic (problems & solvers), and services separated for clarity and maintainability.
 
@@ -214,13 +214,13 @@ For larger contributions (new categories, new UI flows), open an issue first to 
 
 ---
 
-### Contact and Maintainer
+### Contact & Maintainer
 
 - **Name:** Md Abu Kayser
-- **Project:** _JS-SolutionVault_
+- **Project:** _js-solution-vault_
 - **Maintainer:** [md-abu-kayser](https://github.com/md-abu-kayser)
-- **Email:** [abu.kayser.official@gmail.com](mailto:abu.kayser.official@gmail.com)
 - **GitHub:** [github.com/abu.kayser-official](https://github.com/md-abu-kayser)
+- **Email:** [abu.kayser.official@gmail.com](mailto:abu.kayser.official@gmail.com)
 
 If you’d like this README tailored for a specific purpose - such as **hiring managers**, **open-source contributors**, or **client deliverables** - feel free to request a custom tone or format.
 
@@ -230,5 +230,7 @@ If you'd like help integrating this into a portfolio, demoing it, or adding ente
 
 ---
 
-Thank you for checking out JS SolutionVault — built for clarity, learning, and high-quality examples.
+Thank you for checking out JS SolutionVault - built for clarity, learning, and high-quality examples.
+
+---
 
