@@ -6,7 +6,7 @@
 
 <!-- Developers Google AI -->
 
-[![Google GenAI](https://img.shields.io/badge/google--genai-%-orange)](https://developers.google.com/)
+[![Google GenAI](https://img.shields.io/badge/google--genai-%5E1.19.0-orange)](https://developers.google.com/)
 
 <!-- HTML & CSS -->
 
@@ -69,7 +69,7 @@
 
 ---
 
-> **Interactive learning platform that helps developers master JavaScript through curated problems, step-by-step explanations, and AI-powered assistance.**
+> **Interactive learning platform that helps developers master JavaScript through curated problems, step-by-step explanations**
 
 ---
 
@@ -116,7 +116,7 @@ npm run dev
 
 Open your browser at `http://localhost:5173` (Vite will show the exact URL).
 
-Build for production and locally preview the build:
+**Build for production and locally preview the build:**
 
 ```bash
 npm run build
@@ -303,7 +303,7 @@ If you'd like help integrating this into a portfolio, demoing it, or adding ente
 
 ---
 
-Thank you for checking out JS SolutionVault - built for clarity, learning, and high-quality examples.
+**Thank you for checking out JS Solution Vault - built for clarity, learning, and high-quality examples.**
 
 ---
 
