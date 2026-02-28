@@ -18,6 +18,7 @@ import {
 } from "./solvers";
 
 export const CONVERTER_PROBLEMS: Problem[] = [
+  // problem----> 01
   {
     title: "Kilometer to Meter Converter",
     category: Category.Converter,
@@ -35,6 +36,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "Convert to Meters",
     solver: solveKilometerToMeter,
   },
+
+  // problem----> 02
   {
     title: "Celsius to Fahrenheit Converter",
     category: Category.Converter,
@@ -51,6 +54,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "Convert to Fahrenheit",
     solver: solveCelsiusToFahrenheit,
   },
+
+  // problem----> 03
   {
     title: "Uppercase Converter",
     category: Category.Converter,
@@ -66,6 +71,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Uppercase",
     solver: solveToUppercase,
   },
+
+  // problem----> 04
   {
     title: "Lowercase Converter",
     category: Category.Converter,
@@ -81,6 +88,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Lowercase",
     solver: solveToLowercase,
   },
+
+  // problem----> 05
   {
     title: "Binary to Decimal Converter",
     category: Category.Converter,
@@ -96,6 +105,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Decimal",
     solver: solveBinaryToDecimal,
   },
+
+  // problem----> 06
   {
     title: "Decimal to Binary Converter",
     category: Category.Converter,
@@ -112,6 +123,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Binary",
     solver: solveDecimalToBinary,
   },
+
+  // problem----> 07
   {
     title: "Fahrenheit to Celsius Converter",
     category: Category.Converter,
@@ -127,6 +140,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Celsius",
     solver: solveFahrenheitToCelsius,
   },
+
+  // problem----> 08
   {
     title: "Number Base Converter",
     category: Category.Converter,
@@ -158,6 +173,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "Convert Base",
     solver: solveBaseConverter,
   },
+
+  // problem----> 09
   {
     title: "String to ASCII Converter",
     category: Category.Converter,
@@ -173,6 +190,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To ASCII",
     solver: solveStringToAscii,
   },
+
+  // problem----> 10
   {
     title: "ASCII to String Converter",
     category: Category.Converter,
@@ -188,6 +207,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To String",
     solver: solveAsciiToString,
   },
+
+  // problem----> 11
   {
     title: "Kelvin to Celsius Converter",
     category: Category.Converter,
@@ -203,6 +224,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Celsius",
     solver: solveKelvinToCelsius,
   },
+
+  // problem----> 12
   {
     title: "Hexadecimal to Decimal Converter",
     category: Category.Converter,
@@ -218,6 +241,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Decimal",
     solver: solveHexToDecimal,
   },
+
+  // problem----> 13
   {
     title: "Decimal to Hexadecimal Converter",
     category: Category.Converter,
@@ -234,6 +259,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "To Hexadecimal",
     solver: solveDecimalToHex,
   },
+
+  // problem----> 14
   {
     title: "Number to Roman Numeral Converter",
     category: Category.Converter,
@@ -251,6 +278,8 @@ export const CONVERTER_PROBLEMS: Problem[] = [
     buttonText: "Convert to Roman",
     solver: solveIntToRoman,
   },
+
+  // problem----> 15
   {
     title: "Roman Numeral to Number Converter",
     category: Category.Converter,

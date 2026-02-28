@@ -1,5 +1,6 @@
 import { parseNumber, parseInteger, parseNumberArray } from "../utils";
 
+// problem solver----> 01
 export const solveKilometerToMeter = (inputs: {
   [key: string]: string;
 }): string => {
@@ -9,6 +10,7 @@ export const solveKilometerToMeter = (inputs: {
   return `${km} km = ${meters.toLocaleString()} meters.`;
 };
 
+// problem solver----> 02
 export const solveCelsiusToFahrenheit = (inputs: {
   [key: string]: string;
 }): string => {
@@ -17,12 +19,15 @@ export const solveCelsiusToFahrenheit = (inputs: {
   return `${celsius}°C is equal to ${fahrenheit.toFixed(2)}°F.`;
 };
 
+// problem solver----> 03
 export const solveToUppercase = (inputs: { [key: string]: string }): string =>
   `Uppercase: ${inputs.str.toUpperCase()}`;
 
+// problem solver----> 04
 export const solveToLowercase = (inputs: { [key: string]: string }): string =>
   `Lowercase: ${inputs.str.toLowerCase()}`;
 
+// problem solver----> 05
 export const solveBinaryToDecimal = (inputs: {
   [key: string]: string;
 }): string => {
@@ -30,10 +35,12 @@ export const solveBinaryToDecimal = (inputs: {
   return `Decimal: ${parseInt(inputs.binary, 2)}`;
 };
 
+// problem solver----> 06
 export const solveDecimalToBinary = (inputs: {
   [key: string]: string;
 }): string => `Binary: ${parseInteger(inputs.decimal, "Decimal").toString(2)}`;
 
+// problem solver----> 07
 export const solveFahrenheitToCelsius = (inputs: {
   [key: string]: string;
 }): string => {
@@ -41,6 +48,7 @@ export const solveFahrenheitToCelsius = (inputs: {
   return `${f}°F is ${(((f - 32) * 5) / 9).toFixed(2)}°C.`;
 };
 
+// problem solver----> 08
 export const solveBaseConverter = (inputs: {
   [key: string]: string;
 }): string => {
@@ -52,6 +60,7 @@ export const solveBaseConverter = (inputs: {
   return `Result: ${parseInt(num, from).toString(to)}`;
 };
 
+// problem solver----> 09
 export const solveStringToAscii = (inputs: {
   [key: string]: string;
 }): string => {
@@ -61,6 +70,7 @@ export const solveStringToAscii = (inputs: {
     .join(", ")}]`;
 };
 
+// problem solver----> 10
 export const solveAsciiToString = (inputs: {
   [key: string]: string;
 }): string => {
@@ -68,13 +78,15 @@ export const solveAsciiToString = (inputs: {
   return `String: "${String.fromCharCode(...codes)}"`;
 };
 
+// problem solver----> 11
 export const solveKelvinToCelsius = (inputs: {
   [key: string]: string;
 }): string =>
   `${inputs.kelvin}K is ${(
     parseNumber(inputs.kelvin, "Kelvin") - 273.15
-  ).toFixed(2)}°C.`;
+  ).toFixed(02)}°C.`;
 
+// problem solver----> 12
 export const solveHexToDecimal = (inputs: {
   [key: string]: string;
 }): string => {
@@ -83,9 +95,11 @@ export const solveHexToDecimal = (inputs: {
   return `Decimal: ${parseInt(inputs.hex, 16)}`;
 };
 
+// problem solver----> 13
 export const solveDecimalToHex = (inputs: { [key: string]: string }): string =>
   `Hex: ${parseInteger(inputs.dec, "Decimal").toString(16).toUpperCase()}`;
 
+// problem solver----> 14
 export const solveIntToRoman = (inputs: { [key: string]: string }): string => {
   let num = parseInteger(inputs.num, "Number");
   if (num < 1 || num > 3999)
@@ -116,6 +130,7 @@ export const solveIntToRoman = (inputs: { [key: string]: string }): string => {
   return `${inputs.num} in Roman numerals is: ${result}`;
 };
 
+// problem solver----> 15
 export const solveRomanToNum = (inputs: { [key: string]: string }): string => {
   const roman = inputs.roman.toUpperCase();
   const map: { [key: string]: number } = {
