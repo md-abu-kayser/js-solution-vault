@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               The ultimate platform for mastering JavaScript through practice.
             </p>
             <p className="mt-2 text-sm text-[--text-color]/70">
-              © 2024 JS Pro. All rights reserved.
+              © 2026 JS Pro. All rights reserved.
             </p>
           </div>
           <div>

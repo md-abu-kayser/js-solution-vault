@@ -1,5 +1,6 @@
 import { parseInteger, parseNumber, parseJSON } from "../utils";
 
+// problem solver----> 01
 export const solveFibonacci = (inputs: { [key: string]: string }): string => {
   const n = parseInteger(inputs.terms, "Terms");
   if (n <= 0) throw new Error("Number of terms must be positive.");
@@ -26,6 +27,7 @@ const factorial = (num: number): number => {
   return result;
 };
 
+// problem solver----> 02
 export const solveMemoizeFactorial = (inputs: {
   [key: string]: string;
 }): string => {
@@ -35,16 +37,19 @@ export const solveMemoizeFactorial = (inputs: {
   )}. (Memoization is conceptual here).`;
 };
 
+// problem solver----> 03
 export const solveDeepClone = (inputs: { [key: string]: string }): string => {
   const obj = parseJSON(inputs.obj, "Object");
   const cloned = JSON.parse(JSON.stringify(obj));
   return `Cloned: ${JSON.stringify(cloned, null, 2)}`;
 };
 
+// problem solver----> 04
 export const solvePromiseAll = (inputs: { [key: string]: string }): string => {
   return `Simulating Promise.all with delays: [${inputs.delays}]. The UI would handle the async operation.`;
 };
 
+// problem solver----> 05
 export const solveCurryAddition = (inputs: {
   [key: string]: string;
 }): string => {
@@ -54,13 +59,19 @@ export const solveCurryAddition = (inputs: {
   return `Curried sum: ${n1 + n2 + n3}`;
 };
 
+// problem solver----> 06
 export const solveEventEmitter = (inputs: { [key: string]: string }): string =>
   `Emitting event: "${inputs.event}". The UI would show the result from the listener.`;
+
+// problem solver----> 07
 export const solveLRUCache = (inputs: { [key: string]: string }): string =>
   `Simulating LRU Cache. UI would manage the state.`;
-export const solveRateLimiter = (inputs: { [key: string]: string }): string =>
+
+// problem solver----> 08
+export const problem solverateLimiter = (inputs: { [key: string]: string }): string =>
   `Simulating Rate Limiter. UI would manage the state.`;
 
+// problem solver----> 09
 export const solveDeepEqual = (inputs: { [key: string]: string }): string => {
   const obj1 = parseJSON(inputs.obj1, "Object 1");
   const obj2 = parseJSON(inputs.obj2, "Object 2");
@@ -84,36 +95,47 @@ export const solveDeepEqual = (inputs: { [key: string]: string }): string => {
   return `Objects are deep equal: ${deepEqual(obj1, obj2)}`;
 };
 
+// problem solver----> 10
 export const solveArrayPermutations = (inputs: {
   [key: string]: string;
 }): string =>
   "Permutations can be large and are best handled conceptually in this UI.";
+
+// problem solver----> 11
 export const solveStringPermutations = (inputs: {
   [key: string]: string;
 }): string =>
   "String permutations can be numerous and are best handled conceptually here.";
+
+// problem solver----> 12
 export const solveArrayCombinations = (inputs: {
   [key: string]: string;
 }): string =>
   "Combinations can be numerous and are best handled conceptually here.";
 
+// problem solver----> 13
 export const solveCustomMap = (inputs: { [key: string]: string }): string =>
   `(Doubled) Mapped: [${inputs.array
     .split(",")
     .map((n) => parseFloat(n.trim()) * 2)
     .join(", ")}]`;
+
+// problem solver----> 14
 export const solveCustomFilter = (inputs: { [key: string]: string }): string =>
   `(Positive) Filtered: [${inputs.array
     .split(",")
     .map((n) => parseFloat(n.trim()))
     .filter((n) => n > 0)
     .join(", ")}]`;
+
+// problem solver----> 15
 export const solveCustomReduce = (inputs: { [key: string]: string }): string =>
   `(Sum) Reduced: ${inputs.array
     .split(",")
     .map((n) => parseFloat(n.trim()))
     .reduce((a, b) => a + b, 0)}`;
 
+// problem solver----> 16
 export const solveJSONValidator = (inputs: {
   [key: string]: string;
 }): string => {
@@ -125,6 +147,7 @@ export const solveJSONValidator = (inputs: {
   }
 };
 
+// problem solver----> 17
 export const solveCaesarCipher = (inputs: {
   [key: string]: string;
 }): string => {
@@ -137,10 +160,10 @@ export const solveCaesarCipher = (inputs: {
     .map((char) => {
       if (char.match(/[a-z]/i)) {
         const code = char.charCodeAt(0);
-        const base = code >= 97 ? 97 : 65; // 'a' or 'A'
+        const base = code >= 97 ? 97 : 65;
         return String.fromCharCode(
           ((code - base + (shift % 26) + 26) % 26) + base
-        ); // handles negative shifts
+        );
       }
       return char;
     })

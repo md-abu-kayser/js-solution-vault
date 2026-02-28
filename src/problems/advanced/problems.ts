@@ -2,6 +2,7 @@ import { Problem, Category, InputType } from "../../../types";
 import * as Solvers from "./solvers";
 
 export const ADVANCED_PROBLEMS: Problem[] = [
+  // problem----> 01
   {
     title: "Fibonacci Sequence Generator",
     category: Category.Advanced,
@@ -18,6 +19,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Generate Sequence",
     solver: Solvers.solveFibonacci,
   },
+  // problem----> 02
   {
     title: "Memoize Factorial",
     category: Category.Advanced,
@@ -34,6 +36,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Calculate (Conceptual)",
     solver: Solvers.solveMemoizeFactorial,
   },
+  // problem----> 03
   {
     title: "Deep Clone Object",
     category: Category.Advanced,
@@ -49,6 +52,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Clone Object",
     solver: Solvers.solveDeepClone,
   },
+  // problem----> 04
   {
     title: "Promise All Simulator",
     category: Category.Advanced,
@@ -64,6 +68,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Simulate",
     solver: Solvers.solvePromiseAll,
   },
+  // problem----> 05
   {
     title: "Curry Addition",
     category: Category.Advanced,
@@ -91,6 +96,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Calculate Curried Sum",
     solver: Solvers.solveCurryAddition,
   },
+  // problem----> 06
   {
     title: "Event Emitter",
     category: Category.Advanced,
@@ -106,6 +112,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Emit Event (Conceptual)",
     solver: Solvers.solveEventEmitter,
   },
+  // problem----> 07
   {
     title: "LRU Cache Simulator",
     category: Category.Advanced,
@@ -114,6 +121,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Simulate (Conceptual)",
     solver: Solvers.solveLRUCache,
   },
+  // problem----> 08
   {
     title: "Rate Limiter",
     category: Category.Advanced,
@@ -122,6 +130,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Simulate (Conceptual)",
     solver: Solvers.solveRateLimiter,
   },
+  // problem----> 09
   {
     title: "Deep Equal Check",
     category: Category.Advanced,
@@ -143,6 +152,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Check Equality",
     solver: Solvers.solveDeepEqual,
   },
+  // problem----> 10
   {
     title: "Array Permutations",
     category: Category.Advanced,
@@ -158,6 +168,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Generate (Conceptual)",
     solver: Solvers.solveArrayPermutations,
   },
+  // problem----> 11
   {
     title: "String Permutations",
     category: Category.Advanced,
@@ -173,6 +184,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Generate (Conceptual)",
     solver: Solvers.solveStringPermutations,
   },
+  // problem----> 12
   {
     title: "Array Combinations",
     category: Category.Advanced,
@@ -195,6 +207,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Generate (Conceptual)",
     solver: Solvers.solveArrayCombinations,
   },
+  // problem----> 13
   {
     title: "Custom Map Function",
     category: Category.Advanced,
@@ -210,6 +223,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Double with Custom Map",
     solver: Solvers.solveCustomMap,
   },
+  // problem----> 14
   {
     title: "Custom Filter Function",
     category: Category.Advanced,
@@ -225,6 +239,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Filter Positives",
     solver: Solvers.solveCustomFilter,
   },
+  // problem----> 15
   {
     title: "Custom Reduce Function",
     category: Category.Advanced,
@@ -240,6 +255,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Sum with Custom Reduce",
     solver: Solvers.solveCustomReduce,
   },
+  // problem----> 16
   {
     title: "JSON Validator",
     category: Category.Advanced,
@@ -255,6 +271,7 @@ export const ADVANCED_PROBLEMS: Problem[] = [
     buttonText: "Validate JSON",
     solver: Solvers.solveJSONValidator,
   },
+  // problem----> 17
   {
     title: "Simple Encryption (Caesar Cipher)",
     category: Category.Advanced,
