@@ -1,10 +1,12 @@
 import { parseInteger, parseNumber } from "../utils";
 
+// problem solver----> 01
 export const solveEvenOrOdd = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   return `${num} is ${num % 2 === 0 ? "Even" : "Odd"}.`;
 };
 
+// problem solver----> 02
 export const solvePalindrome = (inputs: { [key: string]: string }): string => {
   const str = inputs.str.toLowerCase().replace(/[^a-z0-9]/g, "");
   if (!str) throw new Error("Please enter an alphanumeric string.");
@@ -20,17 +22,20 @@ const isPrime = (num: number): boolean => {
   return true;
 };
 
+// problem solver----> 03
 export const solvePrimeNumber = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   return `${num} is ${isPrime(num) ? "" : "not "}a prime number.`;
 };
 
+// problem solver----> 04
 export const solveLeapYear = (inputs: { [key: string]: string }): string => {
   const year = parseInteger(inputs.year, "Year");
   const isLeap = (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
   return `${year} is ${isLeap ? "" : "not "}a leap year.`;
 };
 
+// problem solver----> 05
 export const solveAnagram = (inputs: { [key: string]: string }): string => {
   const normalize = (s: string) =>
     s
@@ -43,12 +48,14 @@ export const solveAnagram = (inputs: { [key: string]: string }): string => {
   return `The strings are ${isAnagram ? "" : "not "}anagrams.`;
 };
 
+// problem solver----> 06
 export const solveNumberSign = (inputs: { [key: string]: string }): string => {
   const num = parseNumber(inputs.num, "Number");
   const sign = num > 0 ? "Positive" : num < 0 ? "Negative" : "Zero";
   return `The number is ${sign}.`;
 };
 
+// problem solver----> 07
 export const solveValidParentheses = (inputs: {
   [key: string]: string;
 }): string => {
@@ -69,6 +76,7 @@ export const solveValidParentheses = (inputs: {
     : "Parentheses are invalid.";
 };
 
+// problem solver----> 08
 export const solveArmstrongNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -94,6 +102,7 @@ const getProperDivisorsSum = (num: number): number => {
   return sum;
 };
 
+// problem solver----> 09
 export const solvePerfectNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -104,6 +113,7 @@ export const solvePerfectNumber = (inputs: {
   }a perfect number.`;
 };
 
+// problem solver----> 10
 export const solveStrongNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -115,6 +125,7 @@ export const solveStrongNumber = (inputs: {
   return `${num} is ${sum === num ? "" : "not "}a Strong number.`;
 };
 
+// problem solver----> 11
 export const solveHarshadNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -127,6 +138,7 @@ export const solveHarshadNumber = (inputs: {
   }a Harshad (or Niven) number.`;
 };
 
+// problem solver----> 12
 export const solveHappyNumber = (inputs: { [key: string]: string }): string => {
   let num = parseInteger(inputs.num, "Number");
   const seen = new Set();
@@ -139,6 +151,7 @@ export const solveHappyNumber = (inputs: { [key: string]: string }): string => {
   return `${inputs.num} is ${num === 1 ? "" : "not "}a happy number.`;
 };
 
+// problem solver----> 13
 export const solveDisariumNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -149,6 +162,7 @@ export const solveDisariumNumber = (inputs: {
   return `${num} is ${sum === num ? "" : "not "}a Disarium number.`;
 };
 
+// problem solver----> 14
 export const solveNeonNumber = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   const square = num * num;
@@ -158,6 +172,7 @@ export const solveNeonNumber = (inputs: { [key: string]: string }): string => {
   return `${num} is ${sumOfDigits === num ? "" : "not "}a Neon number.`;
 };
 
+// problem solver----> 15
 export const solveSpyNumber = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   const digits = String(num).split("").map(Number);
@@ -166,6 +181,7 @@ export const solveSpyNumber = (inputs: { [key: string]: string }): string => {
   return `${num} is ${sum === product ? "" : "not "}a Spy number.`;
 };
 
+// problem solver----> 16
 export const solvePronicNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -174,6 +190,7 @@ export const solvePronicNumber = (inputs: {
   return `${num} is ${sqrt * (sqrt + 1) === num ? "" : "not "}a Pronic number.`;
 };
 
+// problem solver----> 17
 export const solveKaprekarNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -189,6 +206,7 @@ export const solveKaprekarNumber = (inputs: {
   return `${num} is not a Kaprekar number.`;
 };
 
+// problem solver----> 18
 export const solveDuckNumber = (inputs: { [key: string]: string }): string => {
   const numStr = inputs.num;
   parseInteger(numStr, "Number");
@@ -197,6 +215,7 @@ export const solveDuckNumber = (inputs: { [key: string]: string }): string => {
   }a Duck number.`;
 };
 
+// problem solver----> 19
 export const solveEvilNumber = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   const binary = num.toString(2);
@@ -204,6 +223,7 @@ export const solveEvilNumber = (inputs: { [key: string]: string }): string => {
   return `${num} is ${ones % 2 === 0 ? "" : "not "}an Evil number.`;
 };
 
+// problem solver----> 20
 export const solveKeithNumber = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   const digits = String(num).split("").map(Number);
@@ -217,6 +237,7 @@ export const solveKeithNumber = (inputs: { [key: string]: string }): string => {
   }a Keith number.`;
 };
 
+// problem solver----> 21
 export const solveSmithNumber = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   if (isPrime(num)) return `${num} is not a Smith number.`;
@@ -238,6 +259,7 @@ export const solveSmithNumber = (inputs: { [key: string]: string }): string => {
   }a Smith number.`;
 };
 
+// problem solver----> 22
 export const solveUglyNumber = (inputs: { [key: string]: string }): string => {
   let num = parseInteger(inputs.num, "Number");
   if (num <= 0) return `${num} is not an ugly number.`;
@@ -249,6 +271,7 @@ export const solveUglyNumber = (inputs: { [key: string]: string }): string => {
   return `${inputs.num} is ${num === 1 ? "" : "not "}an Ugly number.`;
 };
 
+// problem solver----> 23
 export const solveAbundantNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -258,6 +281,7 @@ export const solveAbundantNumber = (inputs: {
   }an Abundant number.`;
 };
 
+// problem solver----> 24
 export const solveDeficientNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -267,6 +291,7 @@ export const solveDeficientNumber = (inputs: {
   }a Deficient number.`;
 };
 
+// problem solver----> 25
 export const solveAmicableNumbers = (inputs: {
   [key: string]: string;
 }): string => {
@@ -279,6 +304,7 @@ export const solveAmicableNumbers = (inputs: {
   }amicable numbers.`;
 };
 
+// problem solver----> 26
 export const solveTriangularNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -288,6 +314,7 @@ export const solveTriangularNumber = (inputs: {
   return `${num} is ${Number.isInteger(n) ? "" : "not "}a Triangular number.`;
 };
 
+// problem solver----> 27
 export const solveEmirpNumber = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   const reversedNum = parseInt(String(num).split("").reverse().join(""));
@@ -296,6 +323,7 @@ export const solveEmirpNumber = (inputs: { [key: string]: string }): string => {
   }an Emirp number.`;
 };
 
+// problem solver----> 28
 export const solveValidateEmail = (inputs: {
   [key: string]: string;
 }): string => {
@@ -304,6 +332,7 @@ export const solveValidateEmail = (inputs: {
   return `The email is ${isValid ? "valid" : "invalid"}.`;
 };
 
+// problem solver----> 29
 export const solveValidateURL = (inputs: { [key: string]: string }): string => {
   try {
     new URL(inputs.url);
@@ -313,6 +342,7 @@ export const solveValidateURL = (inputs: { [key: string]: string }): string => {
   }
 };
 
+// problem solver----> 30
 export const solveIsWeekend = (inputs: { [key: string]: string }): string => {
   try {
     const date = new Date(inputs.date);
@@ -326,6 +356,7 @@ export const solveIsWeekend = (inputs: { [key: string]: string }): string => {
   }
 };
 
+// problem solver----> 31
 export const solveCheckISBN = (inputs: { [key: string]: string }): string => {
   const isbn = inputs.isbn.replace(/[-\s]/g, "");
   let isValid = false;
@@ -345,6 +376,7 @@ export const solveCheckISBN = (inputs: { [key: string]: string }): string => {
   return `The ISBN is ${isValid ? "valid" : "invalid"}.`;
 };
 
+// problem solver----> 32
 export const solvePalindromicNumber = (inputs: {
   [key: string]: string;
 }): string => {
@@ -354,16 +386,16 @@ export const solvePalindromicNumber = (inputs: {
   }a palindromic number.`;
 };
 
+// problem solver----> 33
 export const solvePerfectSquare = (inputs: {
   [key: string]: string;
 }): string => {
   const num = parseInteger(inputs.num, "Number");
   if (num < 0) return `${num} is not a perfect square.`;
-  return `${num} is ${
-    Number.isInteger(Math.sqrt(num)) ? "" : "not "
-  }a perfect square.`;
+  return `${num} is ${Number.isInteger(Math.sqrt(num)) ? "" : "not "}a perfect square.`;
 };
 
+// problem solver----> 34
 export const solveFibonacciChecker = (inputs: {
   [key: string]: string;
 }): string => {

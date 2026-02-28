@@ -37,6 +37,7 @@ import {
 } from "./solvers";
 
 export const CHECKER_PROBLEMS: Problem[] = [
+  // problem----> 01
   {
     title: "Even or Odd Checker",
     category: Category.Checker,
@@ -52,6 +53,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Even/Odd",
     solver: solveEvenOrOdd,
   },
+
+  // problem----> 02
   {
     title: "Palindrome Checker",
     category: Category.Checker,
@@ -67,6 +70,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Palindrome",
     solver: solvePalindrome,
   },
+
+  // problem----> 03
   {
     title: "Prime Number Checker",
     category: Category.Checker,
@@ -83,6 +88,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Prime",
     solver: solvePrimeNumber,
   },
+
+  // problem----> 04
   {
     title: "Leap Year Checker",
     category: Category.Checker,
@@ -99,6 +106,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Leap Year",
     solver: solveLeapYear,
   },
+
+  // problem----> 05
   {
     title: "Anagram Checker",
     category: Category.Checker,
@@ -120,6 +129,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Anagram",
     solver: solveAnagram,
   },
+
+  // problem----> 06
   {
     title: "Number Sign Checker",
     category: Category.Checker,
@@ -135,6 +146,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Sign",
     solver: solveNumberSign,
   },
+
+  // problem----> 07
   {
     title: "Valid Parentheses Checker",
     category: Category.Checker,
@@ -150,6 +163,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Validity",
     solver: solveValidParentheses,
   },
+
+  // problem----> 08
   {
     title: "Armstrong Number Checker",
     category: Category.Checker,
@@ -166,6 +181,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Armstrong",
     solver: solveArmstrongNumber,
   },
+
+  // problem----> 09
   {
     title: "Perfect Number Checker",
     category: Category.Checker,
@@ -182,6 +199,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Perfect",
     solver: solvePerfectNumber,
   },
+
+  // problem----> 10
   {
     title: "Strong Number Checker",
     category: Category.Checker,
@@ -198,6 +217,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Strong",
     solver: solveStrongNumber,
   },
+
+  // problem----> 11
   {
     title: "Harshad Number Checker",
     category: Category.Checker,
@@ -214,6 +235,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Harshad",
     solver: solveHarshadNumber,
   },
+
+  // problem----> 12
   {
     title: "Happy Number Checker",
     category: Category.Checker,
@@ -230,6 +253,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Happy",
     solver: solveHappyNumber,
   },
+
+  // problem----> 13
   {
     title: "Disarium Number Checker",
     category: Category.Checker,
@@ -246,6 +271,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Disarium",
     solver: solveDisariumNumber,
   },
+
+  // problem----> 14
   {
     title: "Neon Number Checker",
     category: Category.Checker,
@@ -262,6 +289,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Neon",
     solver: solveNeonNumber,
   },
+
+  // problem----> 15
   {
     title: "Spy Number Checker",
     category: Category.Checker,
@@ -278,6 +307,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Spy",
     solver: solveSpyNumber,
   },
+
+  // problem----> 16
   {
     title: "Pronic Number Checker",
     category: Category.Checker,
@@ -294,6 +325,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Pronic",
     solver: solvePronicNumber,
   },
+
+  // problem----> 17
   {
     title: "Kaprekar Number Checker",
     category: Category.Checker,
@@ -310,6 +343,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Kaprekar",
     solver: solveKaprekarNumber,
   },
+
+  // problem----> 18
   {
     title: "Duck Number Checker",
     category: Category.Checker,
@@ -326,6 +361,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Duck",
     solver: solveDuckNumber,
   },
+
+  // problem----> 19
   {
     title: "Evil Number Checker",
     category: Category.Checker,
@@ -342,6 +379,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Evil",
     solver: solveEvilNumber,
   },
+
+  // problem----> 20
   {
     title: "Keith Number Checker",
     category: Category.Checker,
@@ -358,6 +397,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Keith",
     solver: solveKeithNumber,
   },
+
+  // problem----> 21
   {
     title: "Smith Number Checker",
     category: Category.Checker,
@@ -374,6 +415,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Smith",
     solver: solveSmithNumber,
   },
+
+  // problem----> 22
   {
     title: "Ugly Number Checker",
     category: Category.Checker,
@@ -390,6 +433,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Ugly",
     solver: solveUglyNumber,
   },
+
+  // problem----> 23
   {
     title: "Abundant Number Checker",
     category: Category.Checker,
@@ -406,6 +451,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Abundant",
     solver: solveAbundantNumber,
   },
+
+  // problem----> 24
   {
     title: "Deficient Number Checker",
     category: Category.Checker,
@@ -422,6 +469,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Deficient",
     solver: solveDeficientNumber,
   },
+
+  // problem----> 25
   {
     title: "Amicable Numbers Checker",
     category: Category.Checker,
@@ -445,6 +494,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Amicable",
     solver: solveAmicableNumbers,
   },
+
+  // problem----> 26
   {
     title: "Triangular Number Checker",
     category: Category.Checker,
@@ -461,6 +512,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Triangular",
     solver: solveTriangularNumber,
   },
+
+  // problem----> 27
   {
     title: "Emirp Number Checker",
     category: Category.Checker,
@@ -477,6 +530,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Emirp",
     solver: solveEmirpNumber,
   },
+
+  // problem----> 28
   {
     title: "Validate Email",
     category: Category.Checker,
@@ -492,6 +547,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Validate",
     solver: solveValidateEmail,
   },
+
+  // problem----> 29
   {
     title: "Validate URL",
     category: Category.Checker,
@@ -507,6 +564,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Validate",
     solver: solveValidateURL,
   },
+
+  // problem----> 30
   {
     title: "Is Weekend",
     category: Category.Checker,
@@ -522,6 +581,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check",
     solver: solveIsWeekend,
   },
+
+  // problem----> 31
   {
     title: "Check ISBN",
     category: Category.Checker,
@@ -537,6 +598,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check",
     solver: solveCheckISBN,
   },
+
+  // problem----> 32
   {
     title: "Palindromic Number Checker",
     category: Category.Checker,
@@ -553,6 +616,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Palindromic",
     solver: solvePalindromicNumber,
   },
+
+  // problem----> 33
   {
     title: "Perfect Square Checker",
     category: Category.Checker,
@@ -569,6 +634,8 @@ export const CHECKER_PROBLEMS: Problem[] = [
     buttonText: "Check Perfect Square",
     solver: solvePerfectSquare,
   },
+
+  // problem----> 34
   {
     title: "Fibonacci Checker",
     category: Category.Checker,
