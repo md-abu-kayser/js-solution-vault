@@ -6,32 +6,38 @@ import {
   parseJSON,
 } from "../utils";
 
+// problem solver----> 01
 export const solveArraySum = (inputs: { [key: string]: string }): string => {
   const numbers = parseNumberArray(inputs.numbers);
   const sum = numbers.reduce((acc, num) => acc + num, 0);
   return `The sum is: ${sum}`;
 };
 
+// problem solver----> 02
 export const solveMaxNumber = (inputs: { [key: string]: string }): string => {
   const numbers = parseNumberArray(inputs.numbers);
   if (numbers.length === 0) throw new Error("Array cannot be empty.");
   return `Maximum number is: ${Math.max(...numbers)}`;
 };
 
+// problem solver----> 03
 export const solveMinNumber = (inputs: { [key: string]: string }): string => {
   const numbers = parseNumberArray(inputs.numbers);
   if (numbers.length === 0) throw new Error("Array cannot be empty.");
   return `Minimum number is: ${Math.min(...numbers)}`;
 };
 
+// problem solver----> 04
 export const solveArrayReverse = (inputs: { [key: string]: string }): string =>
   `Reversed: [${parseStringArray(inputs.array).reverse().join(", ")}]`;
 
+// problem solver----> 05
 export const solveArraySort = (inputs: { [key: string]: string }): string =>
   `Sorted: [${parseNumberArray(inputs.array)
     .sort((a, b) => a - b)
     .join(", ")}]`;
 
+// problem solver----> 06
 export const solveRemoveDuplicates = (inputs: {
   [key: string]: string;
 }): string => {
@@ -39,6 +45,7 @@ export const solveRemoveDuplicates = (inputs: {
   return `Unique: [${unique.join(", ")}]`;
 };
 
+// problem solver----> 07
 export const solveArrayIntersection = (inputs: {
   [key: string]: string;
 }): string => {
@@ -48,6 +55,7 @@ export const solveArrayIntersection = (inputs: {
   return `Intersection: [${[...new Set(intersection)].join(", ")}]`;
 };
 
+// problem solver----> 08
 export const solveArrayUnion = (inputs: { [key: string]: string }): string => {
   const arr1 = parseStringArray(inputs.array1);
   const arr2 = parseStringArray(inputs.array2);
@@ -55,21 +63,25 @@ export const solveArrayUnion = (inputs: { [key: string]: string }): string => {
   return `Union: [${union.join(", ")}]`;
 };
 
+// problem solver----> 09
 export const solveFilterEven = (inputs: { [key: string]: string }): string =>
   `Even: [${parseNumberArray(inputs.array)
     .filter((n) => n % 2 === 0)
     .join(", ")}]`;
 
+// problem solver----> 10
 export const solveFilterOdd = (inputs: { [key: string]: string }): string =>
   `Odd: [${parseNumberArray(inputs.array)
     .filter((n) => n % 2 !== 0)
     .join(", ")}]`;
 
+// problem solver----> 11
 export const solveMapSquare = (inputs: { [key: string]: string }): string =>
   `Squared: [${parseNumberArray(inputs.array)
     .map((n) => n * n)
     .join(", ")}]`;
 
+// problem solver----> 12
 export const solveSumEven = (inputs: { [key: string]: string }): string => {
   const sum = parseNumberArray(inputs.array)
     .filter((n) => n % 2 === 0)
@@ -77,6 +89,7 @@ export const solveSumEven = (inputs: { [key: string]: string }): string => {
   return `Sum of evens: ${sum}`;
 };
 
+// problem solver----> 13
 export const solveSumOdd = (inputs: { [key: string]: string }): string => {
   const sum = parseNumberArray(inputs.array)
     .filter((n) => n % 2 !== 0)
@@ -84,6 +97,7 @@ export const solveSumOdd = (inputs: { [key: string]: string }): string => {
   return `Sum of odds: ${sum}`;
 };
 
+// problem solver----> 14
 export const solveArrayContains = (inputs: {
   [key: string]: string;
 }): string => {
@@ -92,11 +106,13 @@ export const solveArrayContains = (inputs: {
   return `Array contains ${value}: ${arr.includes(value)}`;
 };
 
+// problem solver----> 15
 export const solveArrayJoin = (inputs: { [key: string]: string }): string => {
   const arr = parseStringArray(inputs.array);
   return `Joined: ${arr.join(inputs.separator)}`;
 };
 
+// problem solver----> 16
 export const solveArraySlice = (inputs: { [key: string]: string }): string => {
   const arr = parseStringArray(inputs.array);
   const start = parseInteger(inputs.start, "Start Index");
@@ -104,6 +120,7 @@ export const solveArraySlice = (inputs: { [key: string]: string }): string => {
   return `Sliced: [${arr.slice(start, end).join(", ")}]`;
 };
 
+// problem solver----> 17
 export const solveArraySplice = (inputs: { [key: string]: string }): string => {
   const arr = parseStringArray(inputs.array);
   const start = parseInteger(inputs.start, "Start Index");
@@ -112,12 +129,14 @@ export const solveArraySplice = (inputs: { [key: string]: string }): string => {
   return `Spliced: [${arr.join(", ")}]`;
 };
 
+// problem solver----> 18
 export const solveArrayConcat = (inputs: { [key: string]: string }): string =>
   `Concatenated: [${[
     ...parseStringArray(inputs.array1),
     ...parseStringArray(inputs.array2),
   ].join(", ")}]`;
 
+// problem solver----> 19
 export const solveCheckAllPositive = (inputs: {
   [key: string]: string;
 }): string => {
@@ -125,6 +144,7 @@ export const solveCheckAllPositive = (inputs: {
   return `All numbers positive: ${allPositive}`;
 };
 
+// problem solver----> 20
 export const solveDeepFlatten = (inputs: { [key: string]: string }): string => {
   const arr = parseJSON(inputs.array, "Array");
   if (!Array.isArray(arr)) throw new Error("Input must be an array.");
@@ -138,6 +158,7 @@ export const solveDeepFlatten = (inputs: { [key: string]: string }): string => {
   return `Flattened array: [${flattened.join(", ")}]`;
 };
 
+// problem solver----> 21
 export const solveArrayChunk = (inputs: { [key: string]: string }): string => {
   const arr = parseStringArray(inputs.array);
   const size = parseInteger(inputs.size, "Chunk Size");
@@ -149,6 +170,7 @@ export const solveArrayChunk = (inputs: { [key: string]: string }): string => {
   return `Chunks: ${JSON.stringify(chunks)}`;
 };
 
+// problem solver----> 22
 export const solveArrayRotate = (inputs: { [key: string]: string }): string => {
   const arr = parseStringArray(inputs.array);
   if (arr.length === 0) return "Rotated Array: []";
@@ -162,6 +184,7 @@ export const solveArrayRotate = (inputs: { [key: string]: string }): string => {
   return `Rotated: [${rotated.join(", ")}]`;
 };
 
+// problem solver----> 23
 export const solveArrayShuffle = (inputs: {
   [key: string]: string;
 }): string => {
@@ -173,6 +196,7 @@ export const solveArrayShuffle = (inputs: {
   return `Shuffled: [${arr.join(", ")}]`;
 };
 
+// problem solver----> 24
 export const solveBinarySearch = (inputs: {
   [key: string]: string;
 }): string => {
@@ -189,6 +213,7 @@ export const solveBinarySearch = (inputs: {
   return `Value ${target} not found in the array.`;
 };
 
+// problem solver----> 25
 export const solveLinearSearch = (inputs: {
   [key: string]: string;
 }): string => {
@@ -200,6 +225,7 @@ export const solveLinearSearch = (inputs: {
     : `Value ${target} not found.`;
 };
 
+// problem solver----> 26
 export const solveTwoSum = (inputs: { [key: string]: string }): string => {
   const arr = parseNumberArray(inputs.array);
   const target = parseNumber(inputs.target, "Target");
@@ -214,6 +240,7 @@ export const solveTwoSum = (inputs: { [key: string]: string }): string => {
   return "No two sum solution found.";
 };
 
+// problem solver----> 27
 export const solveMaxSubarraySum = (inputs: {
   [key: string]: string;
 }): string => {
@@ -228,11 +255,13 @@ export const solveMaxSubarraySum = (inputs: {
   return `Maximum subarray sum: ${maxGlobal}`;
 };
 
+// problem solver----> 28
 export const solveReverseLinkedList = (inputs: {
   [key: string]: string;
 }): string =>
   `Reversed: [${parseStringArray(inputs.array).reverse().join(", ")}]`;
 
+// problem solver----> 29
 export const solveMergeTwoSortedLists = (inputs: {
   [key: string]: string;
 }): string =>
@@ -243,6 +272,7 @@ export const solveMergeTwoSortedLists = (inputs: {
     .sort((a, b) => a - b)
     .join(", ")}]`;
 
+// problem solver----> 30
 export const solveArrayMaxIndex = (inputs: {
   [key: string]: string;
 }): string => {
@@ -250,6 +280,8 @@ export const solveArrayMaxIndex = (inputs: {
   if (arr.length === 0) return "Max index: N/A";
   return `Max index: ${arr.indexOf(Math.max(...arr))}`;
 };
+
+// problem solver----> 31
 export const solveArrayMinIndex = (inputs: {
   [key: string]: string;
 }): string => {
@@ -258,12 +290,14 @@ export const solveArrayMinIndex = (inputs: {
   return `Min index: ${arr.indexOf(Math.min(...arr))}`;
 };
 
+// problem solver----> 32
 export const solveSumOfSquares = (inputs: { [key: string]: string }): string =>
   `Sum of squares: ${parseNumberArray(inputs.array).reduce(
     (sum, n) => sum + n * n,
     0
   )}`;
 
+// problem solver----> 33
 export const solveMeanDeviation = (inputs: {
   [key: string]: string;
 }): string => {
@@ -275,6 +309,7 @@ export const solveMeanDeviation = (inputs: {
   return `Mean Deviation: ${deviation.toFixed(2)}`;
 };
 
+// problem solver----> 34
 export const solveArrayRotateLeft = (inputs: {
   [key: string]: string;
 }): string => {
@@ -286,6 +321,7 @@ export const solveArrayRotateLeft = (inputs: {
   return `Rotated Left: [${rotated.join(", ")}]`;
 };
 
+// problem solver----> 35
 export const solveArrayRotateRight = (inputs: {
   [key: string]: string;
 }): string => {
@@ -300,5 +336,6 @@ export const solveArrayRotateRight = (inputs: {
   return `Rotated Right: [${rotated.join(", ")}]`;
 };
 
+// problem solver----> 36
 export const solveUniqueCount = (inputs: { [key: string]: string }): string =>
   `Unique count: ${new Set(parseStringArray(inputs.array)).size}`;

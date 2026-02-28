@@ -2,6 +2,7 @@ import { Problem, Category, InputType } from "../../../types";
 import * as Solvers from "./solvers";
 
 export const ARRAY_PROBLEMS: Problem[] = [
+  // problem----> 01
   {
     title: "Array Sum Calculator",
     category: Category.Array,
@@ -17,6 +18,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Calculate Sum",
     solver: Solvers.solveArraySum,
   },
+
+  // problem----> 02
   {
     title: "Maximum Number Finder",
     category: Category.Array,
@@ -32,6 +35,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Maximum",
     solver: Solvers.solveMaxNumber,
   },
+
+  // problem----> 03
   {
     title: "Minimum Number Finder",
     category: Category.Array,
@@ -47,6 +52,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Minimum",
     solver: Solvers.solveMinNumber,
   },
+
+  // problem----> 04
   {
     title: "Array Reverse",
     category: Category.Array,
@@ -62,6 +69,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Reverse Array",
     solver: Solvers.solveArrayReverse,
   },
+
+  // problem----> 05
   {
     title: "Array Sort",
     category: Category.Array,
@@ -77,6 +86,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Sort Array",
     solver: Solvers.solveArraySort,
   },
+
+  // problem----> 06
   {
     title: "Remove Duplicates from Array",
     category: Category.Array,
@@ -92,6 +103,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Remove Duplicates",
     solver: Solvers.solveRemoveDuplicates,
   },
+
+  // problem----> 07
   {
     title: "Array Intersection",
     category: Category.Array,
@@ -113,6 +126,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Intersection",
     solver: Solvers.solveArrayIntersection,
   },
+
+  // problem----> 08
   {
     title: "Array Union",
     category: Category.Array,
@@ -134,6 +149,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Union",
     solver: Solvers.solveArrayUnion,
   },
+
+  // problem----> 09
   {
     title: "Filter Even Numbers",
     category: Category.Array,
@@ -149,6 +166,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Filter Even",
     solver: Solvers.solveFilterEven,
   },
+
+  // problem----> 10
   {
     title: "Filter Odd Numbers",
     category: Category.Array,
@@ -164,6 +183,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Filter Odd",
     solver: Solvers.solveFilterOdd,
   },
+
+  // problem----> 11
   {
     title: "Square Array Elements",
     category: Category.Array,
@@ -179,6 +200,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Square Elements",
     solver: Solvers.solveMapSquare,
   },
+
+  // problem----> 12
   {
     title: "Sum of Even Numbers",
     category: Category.Array,
@@ -194,6 +217,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Calculate Sum",
     solver: Solvers.solveSumEven,
   },
+
+  // problem----> 13
   {
     title: "Sum of Odd Numbers",
     category: Category.Array,
@@ -209,6 +234,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Calculate Sum",
     solver: Solvers.solveSumOdd,
   },
+
+  // problem----> 14
   {
     title: "Array Contains Number",
     category: Category.Array,
@@ -230,6 +257,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Check Contains",
     solver: Solvers.solveArrayContains,
   },
+
+  // problem----> 15
   {
     title: "Array Join",
     category: Category.Array,
@@ -251,6 +280,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Join Array",
     solver: Solvers.solveArrayJoin,
   },
+
+  // problem----> 16
   {
     title: "Array Slice",
     category: Category.Array,
@@ -278,6 +309,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Slice Array",
     solver: Solvers.solveArraySlice,
   },
+
+  // problem----> 17
   {
     title: "Array Splice",
     category: Category.Array,
@@ -305,6 +338,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Splice Array",
     solver: Solvers.solveArraySplice,
   },
+
+  // problem----> 18
   {
     title: "Array Concatenation",
     category: Category.Array,
@@ -326,6 +361,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Concatenate",
     solver: Solvers.solveArrayConcat,
   },
+
+  // problem----> 19
   {
     title: "Check All Positive",
     category: Category.Array,
@@ -341,6 +378,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Check All Positive",
     solver: Solvers.solveCheckAllPositive,
   },
+
+  // problem----> 20
   {
     title: "Deep Array Flatten",
     category: Category.Array,
@@ -356,6 +395,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Flatten Array",
     solver: Solvers.solveDeepFlatten,
   },
+
+  // problem----> 21
   {
     title: "Array Chunk",
     category: Category.Array,
@@ -378,6 +419,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Chunk Array",
     solver: Solvers.solveArrayChunk,
   },
+
+  // problem----> 22
   {
     title: "Array Rotate",
     category: Category.Array,
@@ -399,6 +442,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Rotate Array",
     solver: Solvers.solveArrayRotate,
   },
+
+  // problem----> 23
   {
     title: "Array Shuffle",
     category: Category.Array,
@@ -414,6 +459,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Shuffle Array",
     solver: Solvers.solveArrayShuffle,
   },
+
+  // problem----> 24
   {
     title: "Binary Search",
     category: Category.Array,
@@ -435,6 +482,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Search",
     solver: Solvers.solveBinarySearch,
   },
+
+  // problem----> 25
   {
     title: "Linear Search",
     category: Category.Array,
@@ -456,6 +505,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Search",
     solver: Solvers.solveLinearSearch,
   },
+
+  // problem----> 26
   {
     title: "Two Sum",
     category: Category.Array,
@@ -477,6 +528,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Indices",
     solver: Solvers.solveTwoSum,
   },
+
+  // problem----> 27
   {
     title: "Maximum Subarray Sum",
     category: Category.Array,
@@ -492,6 +545,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Max Sum",
     solver: Solvers.solveMaxSubarraySum,
   },
+
+  // problem----> 28
   {
     title: "Reverse Linked List (Array Simulation)",
     category: Category.Array,
@@ -507,6 +562,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Reverse List",
     solver: Solvers.solveReverseLinkedList,
   },
+
+  // problem----> 29
   {
     title: "Merge Two Sorted Lists (Array Simulation)",
     category: Category.Array,
@@ -528,6 +585,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Merge Lists",
     solver: Solvers.solveMergeTwoSortedLists,
   },
+
+  // problem----> 30
   {
     title: "Array Max Index Finder",
     category: Category.Array,
@@ -543,6 +602,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Max Index",
     solver: Solvers.solveArrayMaxIndex,
   },
+
+  // problem----> 31
   {
     title: "Array Min Index Finder",
     category: Category.Array,
@@ -558,6 +619,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Find Min Index",
     solver: Solvers.solveArrayMinIndex,
   },
+
+  // problem----> 32
   {
     title: "Array Sum of Squares",
     category: Category.Array,
@@ -573,6 +636,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Calculate Sum of Squares",
     solver: Solvers.solveSumOfSquares,
   },
+
+  // problem----> 33
   {
     title: "Array Mean Deviation",
     category: Category.Array,
@@ -588,6 +653,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Calculate Mean Deviation",
     solver: Solvers.solveMeanDeviation,
   },
+
+  // problem----> 34
   {
     title: "Array Rotation Left",
     category: Category.Array,
@@ -610,6 +677,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Rotate Left",
     solver: Solvers.solveArrayRotateLeft,
   },
+
+  // problem----> 35
   {
     title: "Array Rotation Right",
     category: Category.Array,
@@ -632,6 +701,8 @@ export const ARRAY_PROBLEMS: Problem[] = [
     buttonText: "Rotate Right",
     solver: Solvers.solveArrayRotateRight,
   },
+
+  // problem----> 36
   {
     title: "Array Unique Elements Counter",
     category: Category.Array,
