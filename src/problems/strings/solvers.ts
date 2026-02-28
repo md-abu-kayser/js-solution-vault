@@ -1,5 +1,6 @@
 import { parseStringArray } from "../utils";
 
+// problem solver----> 01
 export const solveLongestName = (inputs: { [key: string]: string }): string => {
   const names = parseStringArray(inputs.names);
   if (names.length === 0) throw new Error("Please provide at least one name.");
@@ -10,6 +11,7 @@ export const solveLongestName = (inputs: { [key: string]: string }): string => {
   return `Longest name is: "${longestName}"`;
 };
 
+// problem solver----> 02
 export const solveStringReversal = (inputs: {
   [key: string]: string;
 }): string => {
@@ -18,6 +20,7 @@ export const solveStringReversal = (inputs: {
   return `Reversed: "${str.split("").reverse().join("")}"`;
 };
 
+// problem solver----> 03
 export const solveVowelCounter = (inputs: {
   [key: string]: string;
 }): string => {
@@ -27,20 +30,24 @@ export const solveVowelCounter = (inputs: {
   return `There are ${count} vowels in "${str}".`;
 };
 
+// problem solver----> 04
 export const solveStringLength = (inputs: {
   [key: string]: string;
 }): string => {
   return `Length: ${inputs.str.length}`;
 };
 
+// problem solver----> 05
 export const solveWordCount = (inputs: { [key: string]: string }): string => {
   const words = inputs.sentence.trim().split(/\s+/).filter(Boolean);
   return `Word count: ${words.length}`;
 };
 
+// problem solver----> 06
 export const solveCharCount = (inputs: { [key: string]: string }): string =>
   `Character count: ${inputs.str.length}`;
 
+// problem solver----> 07
 export const solveCapitalizeWords = (inputs: {
   [key: string]: string;
 }): string => {
@@ -51,6 +58,7 @@ export const solveCapitalizeWords = (inputs: {
   return `Capitalized: ${capitalized}`;
 };
 
+// problem solver----> 08
 export const solveStringReplace = (inputs: {
   [key: string]: string;
 }): string => {
@@ -58,15 +66,19 @@ export const solveStringReplace = (inputs: {
   return `Replaced: ${replaced}`;
 };
 
+// problem solver----> 09
 export const solveStringTrim = (inputs: { [key: string]: string }): string =>
   `Trimmed: "${inputs.str.trim()}"`;
 
+// problem solver----> 10
 export const solveStartsWith = (inputs: { [key: string]: string }): string =>
   `Starts with "${inputs.prefix}": ${inputs.str.startsWith(inputs.prefix)}`;
 
+// problem solver----> 11
 export const solveEndsWith = (inputs: { [key: string]: string }): string =>
   `Ends with "${inputs.suffix}": ${inputs.str.endsWith(inputs.suffix)}`;
 
+// problem solver----> 12
 export const solveStringRepeat = (inputs: {
   [key: string]: string;
 }): string => {
@@ -76,9 +88,11 @@ export const solveStringRepeat = (inputs: {
   return `Repeated: ${inputs.str.repeat(count)}`;
 };
 
+// problem solver----> 13
 export const solveVowelRemover = (inputs: { [key: string]: string }): string =>
   `Result: ${inputs.str.replace(/[aeiou]/gi, "")}`;
 
+// problem solver----> 14
 export const solveCaseSwap = (inputs: { [key: string]: string }): string => {
   const swapped = inputs.str
     .split("")
@@ -87,6 +101,7 @@ export const solveCaseSwap = (inputs: { [key: string]: string }): string => {
   return `Swapped: ${swapped}`;
 };
 
+// problem solver----> 15
 export const solveStringCompress = (inputs: {
   [key: string]: string;
 }): string => {

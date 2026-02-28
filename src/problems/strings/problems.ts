@@ -18,6 +18,7 @@ import {
 } from "./solvers";
 
 export const STRING_PROBLEMS: Problem[] = [
+  // problem----> 01
   {
     title: "Longest Name Finder",
     category: Category.String,
@@ -33,6 +34,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Find Longest Name",
     solver: solveLongestName,
   },
+
+  // problem----> 02
   {
     title: "String Reversal",
     category: Category.String,
@@ -48,6 +51,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Reverse String",
     solver: solveStringReversal,
   },
+
+  // problem----> 03
   {
     title: "Vowel Counter",
     category: Category.String,
@@ -63,6 +68,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Count Vowels",
     solver: solveVowelCounter,
   },
+
+  // problem----> 04
   {
     title: "String Length Counter",
     category: Category.String,
@@ -78,6 +85,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Count Length",
     solver: solveStringLength,
   },
+
+  // problem----> 05
   {
     title: "Word Counter",
     category: Category.String,
@@ -93,6 +102,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Count Words",
     solver: solveWordCount,
   },
+
+  // problem----> 06
   {
     title: "Character Counter",
     category: Category.String,
@@ -108,6 +119,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Count Characters",
     solver: solveCharCount,
   },
+
+  // problem----> 07
   {
     title: "Capitalize Words",
     category: Category.String,
@@ -123,6 +136,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Capitalize",
     solver: solveCapitalizeWords,
   },
+
+  // problem----> 08
   {
     title: "String Replace",
     category: Category.String,
@@ -150,6 +165,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Replace",
     solver: solveStringReplace,
   },
+
+  // problem----> 09
   {
     title: "String Trim",
     category: Category.String,
@@ -165,6 +182,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Trim String",
     solver: solveStringTrim,
   },
+
+  // problem----> 10
   {
     title: "String Starts With",
     category: Category.String,
@@ -186,6 +205,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Check Starts With",
     solver: solveStartsWith,
   },
+
+  // problem----> 11
   {
     title: "String Ends With",
     category: Category.String,
@@ -207,6 +228,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Check Ends With",
     solver: solveEndsWith,
   },
+
+  // problem----> 12
   {
     title: "String Repeat",
     category: Category.String,
@@ -229,6 +252,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Repeat String",
     solver: solveStringRepeat,
   },
+
+  // problem----> 13
   {
     title: "String Vowel Remover",
     category: Category.String,
@@ -244,6 +269,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Remove Vowels",
     solver: solveVowelRemover,
   },
+
+  // problem----> 14
   {
     title: "String Case Swap",
     category: Category.String,
@@ -259,6 +286,8 @@ export const STRING_PROBLEMS: Problem[] = [
     buttonText: "Swap Case",
     solver: solveCaseSwap,
   },
+
+  // problem----> 15
   {
     title: "String Compression",
     category: Category.String,
