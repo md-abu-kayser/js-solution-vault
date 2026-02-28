@@ -6,7 +6,7 @@
 
 <!-- Developers Google AI -->
 
-[![Google GenAI](https://img.shields.io/badge/google--genai-%5E-orange)](https://developers.google.com/)
+[![Google GenAI](https://img.shields.io/badge/google--genai-%-orange)](https://developers.google.com/)
 
 <!-- HTML & CSS -->
 
@@ -15,7 +15,7 @@
 
 <!-- Styling / PostCSS -->
 
-[![Tailwind CSS](https://img.shields.io/badge/tailwindcss-%5E-teal)](https://tailwindcss.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss\&logoColor=white)](https://tailwindcss.com/docs/)
 [![PostCSS](https://img.shields.io/badge/PostCSS-efefef?logo=postcss\&logoColor=black)](https://postcss.org/)
 [![daisyUI](https://img.shields.io/badge/daisyUI-5A0EF8?logo=tailwindcss\&logoColor=white)](https://daisyui.com/)
 
@@ -44,7 +44,7 @@
 
 <!-- Bundler -->
 
-[![Vite](https://img.shields.io/badge/vite-%5E-yellow)](https://vitejs.dev/)
+[![Vite](https://img.shields.io/badge/Vite-646cff?logo=vite\&logoColor=white)](https://vite.dev/)
 
 ## Plain docs links
 
