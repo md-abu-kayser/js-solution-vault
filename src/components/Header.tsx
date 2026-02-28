@@ -62,7 +62,7 @@ export const Header: React.FC<HeaderProps> = ({
             JavaScript Master Edition
           </h1>
           <p className="mt-6 max-w-3xl mx-auto text-lg sm:text-xl text-[--text-color]/80">
-            A comprehensive collection of 200+ JavaScript problems with
+            A comprehensive collection of 136+ JavaScript problems with
             interactive solutions, modern practices, and AI-powered
             explanations.
           </p>
