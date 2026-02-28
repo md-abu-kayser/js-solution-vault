@@ -2,6 +2,7 @@ import { Problem, Category, InputType } from "../../../types";
 import * as Solvers from "./solvers";
 
 export const CALCULATOR_PROBLEMS: Problem[] = [
+  // problem----> 01
   {
     title: "Budget Calculator",
     category: Category.Calculator,
@@ -35,6 +36,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Total",
     solver: Solvers.solveBudget,
   },
+
+  // problem----> 02
   {
     title: "Hotel Cost Calculator",
     category: Category.Calculator,
@@ -51,6 +54,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Cost",
     solver: Solvers.solveHotelCost,
   },
+
+  // problem----> 03
   {
     title: "Factorial Calculator",
     category: Category.Calculator,
@@ -67,6 +72,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Factorial",
     solver: Solvers.solveFactorial,
   },
+
+  // problem----> 04
   {
     title: "Square Calculator",
     category: Category.Calculator,
@@ -82,6 +89,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Square",
     solver: Solvers.solveSquare,
   },
+
+  // problem----> 05
   {
     title: "Cube Calculator",
     category: Category.Calculator,
@@ -97,6 +106,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Cube",
     solver: Solvers.solveCube,
   },
+
+  // problem----> 06
   {
     title: "Absolute Value Calculator",
     category: Category.Calculator,
@@ -112,6 +123,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Get Absolute Value",
     solver: Solvers.solveAbsolute,
   },
+
+  // problem----> 07
   {
     title: "Area of Circle Calculator",
     category: Category.Calculator,
@@ -128,6 +141,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Area",
     solver: Solvers.solveCircleArea,
   },
+
+  // problem----> 08
   {
     title: "Rectangle Perimeter Calculator",
     category: Category.Calculator,
@@ -151,6 +166,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Perimeter",
     solver: Solvers.solveRectanglePerimeter,
   },
+
+  // problem----> 09
   {
     title: "Rectangle Area Calculator",
     category: Category.Calculator,
@@ -174,6 +191,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Area",
     solver: Solvers.solveRectangleArea,
   },
+
+  // problem----> 10
   {
     title: "Simple Interest Calculator",
     category: Category.Calculator,
@@ -204,6 +223,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Interest",
     solver: Solvers.solveSimpleInterest,
   },
+
+  // problem----> 11
   {
     title: "Compound Interest Calculator",
     category: Category.Calculator,
@@ -234,6 +255,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Amount",
     solver: Solvers.solveCompoundInterest,
   },
+
+  // problem----> 12
   {
     title: "BMI Calculator",
     category: Category.Calculator,
@@ -257,6 +280,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate BMI",
     solver: Solvers.solveBMICalculator,
   },
+
+  // problem----> 13
   {
     title: "Array Average Calculator",
     category: Category.Calculator,
@@ -272,6 +297,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Average",
     solver: Solvers.solveArrayAverage,
   },
+
+  // problem----> 14
   {
     title: "Area of Triangle Calculator",
     category: Category.Calculator,
@@ -295,6 +322,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Area",
     solver: Solvers.solveTriangleArea,
   },
+
+  // problem----> 15
   {
     title: "GCD Calculator",
     category: Category.Calculator,
@@ -316,6 +345,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate GCD",
     solver: Solvers.solveGCD,
   },
+
+  // problem----> 16
   {
     title: "LCM Calculator",
     category: Category.Calculator,
@@ -337,6 +368,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate LCM",
     solver: Solvers.solveLCM,
   },
+
+  // problem----> 17
   {
     title: "Power Calculator",
     category: Category.Calculator,
@@ -358,6 +391,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Power",
     solver: Solvers.solvePower,
   },
+
+  // problem----> 18
   {
     title: "Square Root Calculator",
     category: Category.Calculator,
@@ -374,6 +409,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Square Root",
     solver: Solvers.solveSquareRoot,
   },
+
+  // problem----> 19
   {
     title: "Volume of Sphere Calculator",
     category: Category.Calculator,
@@ -390,6 +427,8 @@ export const CALCULATOR_PROBLEMS: Problem[] = [
     buttonText: "Calculate Volume",
     solver: Solvers.solveSphereVolume,
   },
+
+  // problem----> 20
   {
     title: "Simple Calculator",
     category: Category.Calculator,

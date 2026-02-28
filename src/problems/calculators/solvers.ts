@@ -1,5 +1,6 @@
 import { parseNumber, parseInteger, parseNumberArray } from "../utils";
 
+// problem solver----> 01
 export const solveBudget = (inputs: { [key: string]: string }): string => {
   const watches = parseInteger(inputs.watches || "0", "Watches");
   const phones = parseInteger(inputs.phones || "0", "Phones");
@@ -11,6 +12,7 @@ export const solveBudget = (inputs: { [key: string]: string }): string => {
   return `Total Budget: ₦${total.toLocaleString()}`;
 };
 
+// problem solver----> 02
 export const solveHotelCost = (inputs: { [key: string]: string }): string => {
   const days = parseInteger(inputs.days, "Days");
   if (days <= 0) throw new Error("Number of days must be positive.");
@@ -34,33 +36,39 @@ const factorial = (num: number): number => {
   return result;
 };
 
+// problem solver----> 03
 export const solveFactorial = (inputs: { [key: string]: string }): string => {
   const num = parseInteger(inputs.num, "Number");
   const result = factorial(num);
   return `Factorial of ${num} is ${result.toLocaleString()}.`;
 };
 
+// problem solver----> 04
 export const solveSquare = (inputs: { [key: string]: string }): string => {
   const num = parseNumber(inputs.num, "Number");
   return `Square of ${num} is ${num * num}.`;
 };
 
+// problem solver----> 05
 export const solveCube = (inputs: { [key: string]: string }): string => {
   const num = parseNumber(inputs.num, "Number");
   return `Cube of ${num} is ${num * num * num}.`;
 };
 
+// problem solver----> 06
 export const solveAbsolute = (inputs: { [key: string]: string }): string => {
   const num = parseNumber(inputs.num, "Number");
   return `Absolute value of ${num} is ${Math.abs(num)}.`;
 };
 
+// problem solver----> 07
 export const solveCircleArea = (inputs: { [key: string]: string }): string => {
   const radius = parseNumber(inputs.radius, "Radius");
   if (radius < 0) throw new Error("Radius must be non-negative.");
   return `Area: ${(Math.PI * radius * radius).toFixed(2)}`;
 };
 
+// problem solver----> 08
 export const solveRectanglePerimeter = (inputs: {
   [key: string]: string;
 }): string => {
@@ -71,6 +79,7 @@ export const solveRectanglePerimeter = (inputs: {
   return `Perimeter: ${2 * (length + width)}`;
 };
 
+// problem solver----> 09
 export const solveRectangleArea = (inputs: {
   [key: string]: string;
 }): string => {
@@ -81,6 +90,7 @@ export const solveRectangleArea = (inputs: {
   return `Area: ${length * width}`;
 };
 
+// problem solver----> 10
 export const solveSimpleInterest = (inputs: {
   [key: string]: string;
 }): string => {
@@ -91,6 +101,7 @@ export const solveSimpleInterest = (inputs: {
   return `Simple Interest: ${((p * r * t) / 100).toFixed(2)}`;
 };
 
+// problem solver----> 11
 export const solveCompoundInterest = (inputs: {
   [key: string]: string;
 }): string => {
@@ -102,6 +113,7 @@ export const solveCompoundInterest = (inputs: {
   return `Amount after ${t} years: ${amount.toFixed(2)}`;
 };
 
+// problem solver----> 12
 export const solveBMICalculator = (inputs: {
   [key: string]: string;
 }): string => {
@@ -113,6 +125,7 @@ export const solveBMICalculator = (inputs: {
   return `BMI: ${bmi.toFixed(2)}`;
 };
 
+// problem solver----> 13
 export const solveArrayAverage = (inputs: {
   [key: string]: string;
 }): string => {
@@ -122,6 +135,7 @@ export const solveArrayAverage = (inputs: {
   return `Average: ${avg.toFixed(2)}`;
 };
 
+// problem solver----> 14
 export const solveTriangleArea = (inputs: {
   [key: string]: string;
 }): string => {
@@ -132,6 +146,7 @@ export const solveTriangleArea = (inputs: {
 };
 
 const gcd = (a: number, b: number): number => (b === 0 ? a : gcd(b, a % b));
+// problem solver----> 15
 export const solveGCD = (inputs: { [key: string]: string }): string => {
   const a = parseInteger(inputs.num1, "Number 1");
   const b = parseInteger(inputs.num2, "Number 2");
@@ -139,18 +154,21 @@ export const solveGCD = (inputs: { [key: string]: string }): string => {
 };
 
 const lcm = (a: number, b: number): number => (a * b) / gcd(a, b);
+// problem solver----> 16
 export const solveLCM = (inputs: { [key: string]: string }): string => {
   const a = parseInteger(inputs.num1, "Number 1");
   const b = parseInteger(inputs.num2, "Number 2");
   return `LCM is ${lcm(a, b)}.`;
 };
 
+// problem solver----> 17
 export const solvePower = (inputs: { [key: string]: string }): string => {
   const b = parseNumber(inputs.base, "Base");
   const e = parseNumber(inputs.exponent, "Exponent");
   return `Result: ${Math.pow(b, e)}`;
 };
 
+// problem solver----> 18
 export const solveSquareRoot = (inputs: { [key: string]: string }): string => {
   const num = parseNumber(inputs.num, "Number");
   if (num < 0)
@@ -158,6 +176,7 @@ export const solveSquareRoot = (inputs: { [key: string]: string }): string => {
   return `Square root: ${Math.sqrt(num).toFixed(4)}`;
 };
 
+// problem solver----> 19
 export const solveSphereVolume = (inputs: {
   [key: string]: string;
 }): string => {
@@ -166,6 +185,7 @@ export const solveSphereVolume = (inputs: {
   return `Volume: ${((4 / 3) * Math.PI * Math.pow(r, 3)).toFixed(2)}`;
 };
 
+// problem solver----> 20
 export const solveSimpleCalculator = (inputs: {
   [key: string]: string;
 }): string => {
