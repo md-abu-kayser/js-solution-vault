@@ -79,20 +79,23 @@ export const solveAsciiToString = (inputs: {
 };
 
 // problem solver----> 11
-export const solveKelvinToCelsius = (inputs: {
-  [key: string]: string;
-}): string =>
-  `${inputs.kelvin}K is ${(
-    parseNumber(inputs.kelvin, "Kelvin") - 273.15
-  ).toFixed(02)}°C.`;
+export const solveKelvinToCelsius = (inputs: { [key: string]: string }): string => {
+  const kelvin = Number(inputs.kelvin);
+  if (isNaN(kelvin)) throw new Error("Invalid Kelvin value.");
+  
+  const celsius = kelvin - 273.15;
+  return `${kelvin}K equals ${celsius.toFixed(2)}°C`;
+};
 
 // problem solver----> 12
-export const solveHexToDecimal = (inputs: {
-  [key: string]: string;
-}): string => {
-  if (!/^[0-9A-F]+$/i.test(inputs.hex))
+export const solveHexToDecimal = (inputs: { [key: string]: string }): string => {
+  const hex = inputs.hex.trim();
+  if (!/^[0-9a-f]+$/i.test(hex)) {
     throw new Error("Invalid hexadecimal string.");
-  return `Decimal: ${parseInt(inputs.hex, 16)}`;
+  }
+
+  const decimal = BigInt(`0x${hex}`);
+  return `Decimal: ${decimal.toString()}`;
 };
 
 // problem solver----> 13

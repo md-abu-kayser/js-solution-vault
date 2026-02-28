@@ -68,8 +68,8 @@ export const solveLRUCache = (inputs: { [key: string]: string }): string =>
   `Simulating LRU Cache. UI would manage the state.`;
 
 // problem solver----> 08
-export const problem solverateLimiter = (inputs: { [key: string]: string }): string =>
-  `Simulating Rate Limiter. UI would manage the state.`;
+export const solveRateLimiter = (inputs: Record<string, string>): string =>
+  "Simulating Rate Limiter. UI would manage the state.";
 
 // problem solver----> 09
 export const solveDeepEqual = (inputs: { [key: string]: string }): string => {
