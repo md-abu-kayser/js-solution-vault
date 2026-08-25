@@ -10,64 +10,41 @@
 
 <!-- HTML & CSS -->
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5\&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3\&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 <!-- Styling / PostCSS -->
 
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss\&logoColor=white)](https://tailwindcss.com/docs/)
-[![PostCSS](https://img.shields.io/badge/PostCSS-efefef?logo=postcss\&logoColor=black)](https://postcss.org/)
-[![daisyUI](https://img.shields.io/badge/daisyUI-5A0EF8?logo=tailwindcss\&logoColor=white)](https://daisyui.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/docs/)
+[![PostCSS](https://img.shields.io/badge/PostCSS-efefef?logo=postcss&logoColor=black)](https://postcss.org/)
+[![daisyUI](https://img.shields.io/badge/daisyUI-5A0EF8?logo=tailwindcss&logoColor=white)](https://daisyui.com/)
 
 <!-- Fonts & Icons -->
 
-[![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?logo=google\&logoColor=white)](https://fonts.google.com/)
-[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?logo=fontawesome\&logoColor=white)](https://fontawesome.com/)
-[![Heroicons](https://img.shields.io/badge/Heroicons-0EA5E9?logo=heroicons\&logoColor=white)](https://heroicons.com/)
+[![Google Fonts](https://img.shields.io/badge/Google_Fonts-4285F4?logo=google&logoColor=white)](https://fonts.google.com/)
+[![Font Awesome](https://img.shields.io/badge/Font_Awesome-528DD7?logo=fontawesome&logoColor=white)](https://fontawesome.com/)
+[![Heroicons](https://img.shields.io/badge/Heroicons-0EA5E9?logo=heroicons&logoColor=white)](https://heroicons.com/)
 
 <!-- Languages & Web Standards -->
 
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript\&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![ECMAScript Spec](https://img.shields.io/badge/ECMAScript-262-7A0BC0?logo=ecmascript\&logoColor=white)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript\&logoColor=white)](https://www.typescriptlang.org/docs/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![ECMAScript Spec](https://img.shields.io/badge/ECMAScript-262-7A0BC0?logo=ecmascript&logoColor=white)](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/docs/)
 
 <!-- Infra & Runtime -->
 
-[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js\&logoColor=white)](https://nodejs.org/)
-[![Express](https://img.shields.io/badge/Express-000000?logo=express\&logoColor=white)](https://expressjs.com/)
+[![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-000000?logo=express&logoColor=white)](https://expressjs.com/)
 [![React](https://img.shields.io/badge/react-blue)](https://reactjs.org/)
 
 <!-- Linting & Formatting -->
 
-[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint\&logoColor=white)](https://eslint.org/docs/latest/)
-[![Prettier](https://img.shields.io/badge/Prettier-2B3A42?logo=prettier\&logoColor=white)](https://prettier.io/docs/)
+[![ESLint](https://img.shields.io/badge/ESLint-4B32C3?logo=eslint&logoColor=white)](https://eslint.org/docs/latest/)
+[![Prettier](https://img.shields.io/badge/Prettier-2B3A42?logo=prettier&logoColor=white)](https://prettier.io/docs/)
 
 <!-- Bundler -->
 
-[![Vite](https://img.shields.io/badge/Vite-646cff?logo=vite\&logoColor=white)](https://vite.dev/)
-
-## Plain docs links
-
-- Google genai docs: https://developers.google.com/
-- HTML (MDN) docs: [https://developer.mozilla.org/en-US/docs/Web/HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
-- CSS (MDN) docs: [https://developer.mozilla.org/en-US/docs/Web/CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- Tailwind CSS docs: [https://tailwindcss.com/docs/](https://tailwindcss.com/docs/)
-- PostCSS docs / postcss.config: [https://postcss.org/](https://postcss.org/)
-- daisyUI docs: [https://daisyui.com/](https://daisyui.com/)
-- Google Fonts docs: [https://fonts.google.com/](https://fonts.google.com/)
-- Font Awesome docs: [https://fontawesome.com/](https://fontawesome.com/)
-- Heroicons docs: [https://heroicons.com/](https://heroicons.com/)
-- JavaScript (MDN) docs: [https://developer.mozilla.org/en-US/docs/Web/JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-- ECMAScript (spec, ECMA-262) docs: [https://www.ecma-international.org/publications-and-standards/standards/ecma-262/](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-- TypeScript docs: [https://www.typescriptlang.org/docs/](https://www.typescriptlang.org/docs/)
-- Node.js docs: [https://nodejs.org/](https://nodejs.org/)
-- Express docs: [https://expressjs.com/](https://expressjs.com/)
-- React docs: https://react.dev/
-- ESLint docs: [https://eslint.org/docs/latest/](https://eslint.org/docs/latest/)
-- Prettier docs: [https://prettier.io/docs/](https://prettier.io/docs/)
-- Vite docs: [https://vite.dev/](https://vite.dev/)
-
----
+## [![Vite](https://img.shields.io/badge/Vite-646cff?logo=vite&logoColor=white)](https://vite.dev/)
 
 > **Interactive learning platform that helps developers master JavaScript through curated problems, step-by-step explanations**
 
@@ -193,12 +170,12 @@ This structure keeps UI, domain logic (problems & solvers), and services separat
 // src/problems/your_category/problems.ts
 export const problems = [
   {
-    id: 'your-problem-id',
-    title: 'Problem title',
-    difficulty: 'medium',
-    description: 'Markdown-friendly problem statement',
-    examples: [ { input: '...', output: '...' } ]
-  }
+    id: "your-problem-id",
+    title: "Problem title",
+    difficulty: "medium",
+    description: "Markdown-friendly problem statement",
+    examples: [{ input: "...", output: "..." }],
+  },
 ];
 ```
 
@@ -236,10 +213,10 @@ This repo currently ships with the core stack and build scripts. Recommended add
 - Add unit tests (Jest / Vitest) for solvers. Example test pattern:
 
 ```ts
-import { solveYourProblem } from '../src/problems/your_category/solvers';
+import { solveYourProblem } from "../src/problems/your_category/solvers";
 
-test('solves sample cases', () => {
-  expect(solveYourProblem('input')).toEqual('expected');
+test("solves sample cases", () => {
+  expect(solveYourProblem("input")).toEqual("expected");
 });
 ```
 
@@ -306,4 +283,3 @@ If you'd like help integrating this into a portfolio, demoing it, or adding ente
 **Thank you for checking out JS Solution Vault - built for clarity, learning, and high-quality examples.**
 
 ---
-
