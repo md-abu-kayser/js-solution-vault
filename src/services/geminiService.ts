@@ -12,7 +12,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
 export const getExplanation = async (
   problemTitle: string,
   solverName: string,
-  code: string
+  code: string,
 ): Promise<string> => {
   try {
     const model = "gemini-2.5-flash";
