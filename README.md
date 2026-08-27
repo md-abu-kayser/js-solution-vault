@@ -1,27 +1,24 @@
 # JS SolutionVault
 
 <p align="center">
-  <strong>136+ JavaScript & TypeScript Problems • Solved • Explained • Structured for Practice</strong>
+  <strong>Interactive JavaScript Problem-Solving Workspace</strong>
 </p>
 
 <p align="center">
-  A developer-focused problem-solving repository built with
-  <strong>React, TypeScript, and Vite</strong> for practicing JavaScript,
-  understanding solution strategies, and studying reusable implementation patterns.
+  Practice <strong>136+ JavaScript problems</strong> through executable inputs,
+  searchable categories, readable solver implementations, and
+  Gemini-powered explanations.
 </p>
 
 <p align="center">
   <a href="https://github.com/md-abu-kayser/js-solution-vault">
     <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github" alt="GitHub Repository" />
   </a>
-  <a href="./LICENSE">
-    <img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License" />
-  </a>
-  <img src="https://img.shields.io/badge/Problems-136%2B-0A66C2?style=for-the-badge" alt="136+ Problems" />
-  <img src="https://img.shields.io/badge/JavaScript-ES6%2B-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript ES6+" />
-  <img src="https://img.shields.io/badge/TypeScript-Type--Safe-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/React-18%2B-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
-  <img src="https://img.shields.io/badge/Vite-Fast%20Build-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Problems-136%2B-2563EB?style=for-the-badge" alt="136+ Problems" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=111827" alt="React 19" />
+  <img src="https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript 5.8" />
+  <img src="https://img.shields.io/badge/Vite-6-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 6" />
+  <img src="https://img.shields.io/badge/License-MIT-16A34A?style=for-the-badge" alt="MIT License" />
 </p>
 
 <p align="center">
@@ -30,8 +27,8 @@
   <a href="#architecture">Architecture</a> •
   <a href="#tech-stack">Tech Stack</a> •
   <a href="#getting-started">Getting Started</a> •
-  <a href="#adding-a-new-problem">Add Problems</a> •
-  <a href="#testing--quality">Testing</a> •
+  <a href="#adding-a-problem">Contributing Problems</a> •
+  <a href="#testing-and-quality">Testing</a> •
   <a href="#roadmap">Roadmap</a>
 </p>
 
@@ -39,236 +36,398 @@
 
 ## Overview
 
-**JS SolutionVault** is a structured library of solved JavaScript and TypeScript problems designed for developers who want to improve their problem-solving skills through **practice, implementation, explanation, and review**.
+**JS SolutionVault** is a browser-based JavaScript problem-solving workspace built around a simple idea:
 
-The project combines a searchable problem library with canonical solution implementations and human-readable explanations.
+> **Practice the problem, run the solution, inspect the implementation, and understand the reasoning behind it.**
 
-Instead of presenting solutions as isolated code snippets, the repository separates:
+The application combines a structured problem catalog with an interactive execution experience.
+
+Each problem can provide:
+
+- A clear problem definition
+- Typed input controls
+- An executable solver
+- Human-readable solution code
+- Copy-to-clipboard support
+- Curated explanation content
+- AI-generated explanations through Gemini
+
+The project is designed to serve two purposes simultaneously:
+
+### Learning Resource
+
+Developers can practice JavaScript problems interactively instead of reading disconnected code snippets.
+
+### Engineering Demonstration
+
+The repository demonstrates how a React + TypeScript application can separate UI concerns, domain content, executable logic, and external service integrations.
+
+---
+
+# Product Philosophy
+
+Traditional problem repositories often look like:
 
 ```text
-Problem Definition
-        ↓
-Solution Implementation
-        ↓
-Explanation
-        ↓
-Interactive Presentation
+Problem → Answer
 ```
 
-This separation makes the project easier to extend, review, test, and maintain.
+JS SolutionVault expands that model:
 
-The repository is intended to function as both:
+```text id="m1w6t7"
+Problem
+   ↓
+Understand Input
+   ↓
+Run Solution
+   ↓
+Inspect Implementation
+   ↓
+Read Explanation
+   ↓
+Ask AI
+   ↓
+Review & Learn
+```
 
-- A personal problem-solving vault
-- A learning reference
-- An interview preparation resource
-- A frontend engineering demonstration
-- A foundation for a larger developer-learning platform
+The goal is not merely to increase the number of solved problems.
+
+The goal is to make each problem **understandable, executable, and reusable as a learning artifact**.
 
 ---
 
-# Project Philosophy
+# Features
 
-The goal of this repository is not simply to collect answers.
+## Problem Catalog
 
-It is to develop the habit of moving through the complete engineering loop:
+The application currently organizes **136+ exercises** across multiple problem categories.
+
+Current categories include:
+
+- Arrays
+- Strings
+- Calculators
+- Checkers
+- Converters
+- Advanced JavaScript logic
+
+Each category represents a consistent content boundary rather than a separate UI implementation.
+
+---
+
+## Interactive Solvers
+
+Problems are not presented as static documentation.
+
+Users can:
+
+```text id="k3ovx1"
+Select Problem
+      ↓
+Enter Input
+      ↓
+Execute Solver
+      ↓
+Read Result
+```
+
+The shared `ProblemCard` component is responsible for rendering the input controls and executing the associated solver.
+
+---
+
+## Search & Discovery
+
+The problem catalog supports title-based search.
+
+Search input is debounced to reduce unnecessary filtering work while users are typing, with the current implementation using a **300 ms debounce**.
+
+Conceptually:
+
+```text id="56x8p2"
+User Types
+    ↓
+Debounce 300ms
+    ↓
+Filter Catalog
+    ↓
+Update Results
+```
+
+This keeps the search interaction responsive without performing a filter operation for every keystroke.
+
+---
+
+## Category Navigation
+
+The sidebar provides category-based navigation and exposes problem counts derived from the catalog.
+
+This gives users two complementary discovery strategies:
+
+```text id="n3u0qz"
+Search by Title
+       OR
+Browse by Category
+```
+
+---
+
+## Solver Inspection
+
+Each problem allows users to inspect the implementation used by the application.
+
+The intended workflow is:
+
+```text id="y6s1gv"
+Run Solution
+     ↓
+Expand Solution
+     ↓
+Inspect Source
+     ↓
+Copy Implementation
+```
+
+This turns the application into both an execution environment and a reference library.
+
+---
+
+## AI-Powered Explanations
+
+The application integrates Gemini through a dedicated service boundary.
+
+The AI workflow is conceptually:
+
+```text id="qg3gqj"
+Selected Problem
+      ↓
+Selected Solver
+      ↓
+Gemini Service
+      ↓
+Generated Markdown Explanation
+      ↓
+Rendered in UI
+```
+
+The repository currently isolates this integration inside:
 
 ```text
-Understand
-   ↓
-Model
-   ↓
-Implement
-   ↓
-Test
-   ↓
-Explain
-   ↓
-Refactor
-   ↓
-Repeat
+src/services/geminiService.ts
 ```
 
-A good solution should therefore be:
-
-- Correct
-- Understandable
-- Testable
-- Maintainable
-- Easy to explain
+This keeps provider-specific logic outside the primary problem and UI modules.
 
 ---
 
-# Why JS SolutionVault?
+## Responsive Navigation
 
-JavaScript development requires more than familiarity with syntax.
+The desktop sidebar adapts into a mobile navigation drawer for smaller screens.
 
-A strong developer should be comfortable reasoning about:
+The interface therefore maintains the same core information architecture across:
 
-```text
-Data Structures
-Algorithms
-Functions
-Objects
-Arrays
-Strings
-Async Behavior
-Modern JavaScript
-TypeScript
-Edge Cases
-Runtime Behavior
+- Desktop
+- Tablet
+- Mobile
+
+---
+
+## Theme Support
+
+The application supports:
+
+- Light theme
+- Dark theme
+- System theme
+
+Theme selection is exposed through the header interface.
+
+---
+
+# Problem Categories
+
+The current catalog is divided into focused areas.
+
+| Category    | Purpose                                                                   |
+| ----------- | ------------------------------------------------------------------------- |
+| Arrays      | Searching, aggregation, transformation, sorting, and set-style operations |
+| Strings     | String manipulation and validation                                        |
+| Calculators | Arithmetic and numeric utilities                                          |
+| Checkers    | Boolean validation and classification                                     |
+| Converters  | Format and unit conversion problems                                       |
+| Advanced    | More involved JavaScript logic and data manipulation                      |
+
+The category organization is part of the domain model rather than hard-coded into individual UI components.
+
+---
+
+# Product Flow
+
+A typical session looks like this:
+
+```text id="rjr9xk"
+┌──────────────────────┐
+│ Choose Category      │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Search / Browse      │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Open Problem         │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Enter Input          │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Run Solver           │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Inspect Code         │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Read / Generate      │
+│ Explanation          │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Continue Practice    │
+└──────────────────────┘
 ```
 
-JS SolutionVault organizes those concepts into a practical problem-solving environment.
-
----
-
-# Project Highlights
-
-## Structured Problem Library
-
-Problems are organized by topic instead of being stored in a single large file.
-
-This makes discovery easier and allows new categories to be added without changing the application architecture.
-
----
-
-## Canonical Solvers
-
-Solutions are kept in dedicated `solvers.ts` modules.
-
-The intended model is:
-
-```text
-Input
-  ↓
-Pure / Focused Solver
-  ↓
-Output
-```
-
-This makes the core logic easier to test and benchmark independently.
-
----
-
-## Curated Explanations
-
-Each problem can have an accompanying explanation describing the reasoning behind the implementation.
-
-This is important because:
-
-```text
-Code tells you WHAT.
-Explanation tells you WHY.
-```
-
----
-
-## Interactive Problem Browsing
-
-The frontend provides problem discovery through reusable components such as:
-
-- `ProblemGrid`
-- `ProblemCard`
-- `MarkdownRenderer`
-- `ThemeSwitcher`
-
-The repository structure explicitly separates these UI responsibilities from problem-domain content.
-
----
-
-## Searchable Learning Experience
-
-The application is designed around browsing, filtering, and reviewing problems rather than opening source files manually.
-
-This creates a more practical learning workflow:
-
-```text
-Discover
-   ↓
-Select
-   ↓
-Read
-   ↓
-Solve
-   ↓
-Compare
-   ↓
-Understand
-```
+The documented application flow follows this same progression from discovery to execution and explanation.
 
 ---
 
 # Architecture
 
-## High-Level Architecture
+The application separates four major responsibilities:
 
-```text
-┌────────────────────────────────────────────────────┐
-│                    React Client                    │
-│                                                    │
-│ Header │ Footer │ ProblemGrid │ ProblemCard       │
-│ MarkdownRenderer │ ThemeSwitcher │ Hooks          │
-└─────────────────────────┬──────────────────────────┘
-                          │
-                          ▼
-┌────────────────────────────────────────────────────┐
-│                 Problem Domain Layer               │
-│                                                    │
-│ problems.ts                                        │
-│ solvers.ts                                         │
-│ explanations.ts                                    │
-└─────────────────────────┬──────────────────────────┘
-                          │
-                          ▼
-┌────────────────────────────────────────────────────┐
-│                   Service Layer                    │
-│                                                    │
-│ geminiService.ts / External integrations           │
-└────────────────────────────────────────────────────┘
+```text id="9zbdc3"
+┌─────────────────────────────────────────────┐
+│                  React UI                   │
+│                                             │
+│ Header / Sidebar / Grid / ProblemCard       │
+└───────────────────┬─────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────────────┐
+│              Problem Domain                 │
+│                                             │
+│ Metadata / Inputs / Solvers / Explanations  │
+└───────────────────┬─────────────────────────┘
+                    │
+                    ▼
+┌─────────────────────────────────────────────┐
+│              Service Boundary               │
+│                                             │
+│             Gemini Integration              │
+└─────────────────────────────────────────────┘
 ```
+
+This separation is one of the central architectural decisions of the repository.
 
 ---
 
-# Architectural Boundaries
+# Architecture Responsibilities
 
-The repository intentionally separates three important concerns.
+| Layer             | Responsibility                                         |
+| ----------------- | ------------------------------------------------------ |
+| UI                | Rendering, navigation, input interaction               |
+| Problem Metadata  | Titles, categories, input definitions, action labels   |
+| Solver Layer      | Executable JavaScript logic                            |
+| Explanation Layer | Curated educational content                            |
+| Service Layer     | External API integrations                              |
+| Hooks             | Reusable interaction behavior such as debounced search |
 
-## UI Layer
+---
 
-Responsible for rendering and user interaction.
+# Data Model
 
-```text
-src/components/
+The shared `Problem` contract is intentionally small.
+
+Current structure:
+
+```ts
+interface Problem {
+  title: string;
+  category: Category;
+  solverName?: string;
+  inputs: ProblemInput[];
+  buttonText: string;
+  solver: (inputs: Record<string, string>) => string;
+}
 ```
 
-## Problem Domain
+This contract allows the shared UI to render and execute different problems without introducing a custom component for every exercise.
 
-Responsible for educational content and solution implementations.
+---
 
-```text
-src/problems/
+# Why the Data Model Matters
+
+Without a shared model, each new problem could require:
+
+```text id="w1f76p"
+New Problem
+   ↓
+New Component
+   ↓
+New Input Logic
+   ↓
+New Execution Logic
+   ↓
+New UI
 ```
 
-## Services
+The current architecture instead aims for:
 
-Responsible for external service communication.
-
-```text
-src/services/
+```text id="a2l4uz"
+New Problem
+   ↓
+Add Data
+   ↓
+Add Solver
+   ↓
+Register
+   ↓
+Existing UI Handles It
 ```
 
-This separation reduces coupling and makes the application easier to evolve.
+This significantly lowers the cost of extending the problem library.
+
+---
+
+# Input Abstraction
+
+Problem inputs define their own rendering information.
+
+An input can describe:
+
+```text id="m2qqp1"
+Label
+Input Type
+Placeholder
+Minimum Value
+Default Value
+```
+
+The shared `ProblemCard` can then translate that metadata into the appropriate control.
+
+This is a practical example of **configuration-driven UI**.
 
 ---
 
 # Repository Structure
 
-```text
+```text id="n4h18f"
 js-solution-vault/
 │
 ├── public/
-│   └── static-assets/
+│   └── static assets
 │
 ├── src/
 │   │
@@ -295,19 +454,21 @@ js-solution-vault/
 │   │   │   ├── solvers.ts
 │   │   │   └── explanations.ts
 │   │   │
+│   │   ├── calculators/
+│   │   ├── checkers/
+│   │   ├── converters/
 │   │   ├── advanced/
-│   │   │   ├── problems.ts
-│   │   │   ├── solvers.ts
-│   │   │   └── explanations.ts
-│   │   │
 │   │   └── index.ts
 │   │
 │   ├── services/
 │   │   └── geminiService.ts
 │   │
-│   ├── App.tsx
-│   └── index.tsx
+│   └── ...
 │
+├── App.tsx
+├── index.tsx
+├── index.html
+├── types.ts
 ├── package.json
 ├── tsconfig.json
 ├── vite.config.ts
@@ -315,227 +476,181 @@ js-solution-vault/
 └── README.md
 ```
 
-> The exact directory tree may change as the repository grows. The important architectural rule is to keep UI, problem content, solution logic, and external services separated.
+The current source layout separates UI components, hooks, problem modules, and external services.
 
 ---
 
-# Core Data Model
+# Problem Module Convention
 
-A problem is conceptually composed of several pieces of information.
+Every problem category should follow the same convention:
 
-```text
-Problem
-├── ID
-├── Title
-├── Difficulty
-├── Description
-├── Examples
-└── Related Solution / Explanation
-```
-
-Example:
-
-```ts
-interface Problem {
-  id: string;
-  title: string;
-  difficulty: "easy" | "medium" | "hard";
-  description: string;
-  examples?: {
-    input: string;
-    output: string;
-  }[];
-}
-```
-
-The exact interface should remain synchronized with the actual implementation.
-
----
-
-# Problem Content Architecture
-
-Every category follows a predictable structure.
-
-```text
-category/
+```text id="3j3ii8"
+src/problems/<category>/
+│
 ├── problems.ts
 ├── solvers.ts
 └── explanations.ts
 ```
 
-## `problems.ts`
-
-Contains:
-
-- Problem metadata
-- Titles
-- Descriptions
-- Difficulty
-- Examples
-
-The repository currently documents this as the source of problem definitions and metadata.
+This convention keeps content predictable.
 
 ---
 
-## `solvers.ts`
+# `problems.ts`
 
-Contains:
+Responsible for problem metadata.
 
-- Canonical implementations
-- Reusable solver functions
-- Deterministic solution logic
+Typical responsibilities:
 
-The core principle is to keep solver logic independent from the UI.
-
----
-
-## `explanations.ts`
-
-Contains:
-
-- Reasoning
-- Solution walkthroughs
-- Helpful notes
-- Learning-oriented explanations
-
-This content can then be rendered by the Markdown rendering layer.
+```text id="7kiw9p"
+Problem Title
+Category
+Solver Name
+Inputs
+Button Text
+```
 
 ---
 
-# Adding a New Problem
+# `solvers.ts`
 
-One of the strongest parts of this architecture is how easy it is to expand.
+Contains the executable implementation.
 
-## Step 1 — Choose a Category
+Solvers should ideally:
 
-Example:
+- Parse the supplied input
+- Validate required assumptions
+- Execute the algorithm
+- Return a display-ready result
 
-```text
+The repository explicitly follows a solver-oriented model where functions are separated from metadata and presentation.
+
+---
+
+# `explanations.ts`
+
+Contains curated explanations associated with the solver.
+
+These explanations can describe:
+
+- The approach
+- Important JavaScript concepts
+- The reasoning behind the implementation
+- Edge cases
+- Complexity considerations
+
+---
+
+# Adding a Problem
+
+Adding a new problem should not require creating a new React component.
+
+## 1. Create or Choose a Category
+
+```text id="ktsfqd"
 src/problems/arrays/
 ```
 
-or create a new category:
+---
 
-```text
-src/problems/recursion/
+## 2. Create the Solver
+
+Example:
+
+```ts id="3v7yk7"
+export const solveFactorial = (inputs: Record<string, string>): string => {
+  const number = Number(inputs.number);
+
+  if (!Number.isInteger(number) || number < 0) {
+    throw new Error("Enter a non-negative integer.");
+  }
+
+  let result = 1;
+
+  for (let current = 2; current <= number; current += 1) {
+    result *= current;
+  }
+
+  return `Factorial: ${result}`;
+};
 ```
 
 ---
 
-## Step 2 — Add the Problem
+## 3. Register Problem Metadata
 
-```ts
-// src/problems/recursion/problems.ts
-
-export const problems = [
-  {
-    id: "recursion-001",
-    title: "Calculate Factorial",
-    difficulty: "easy",
-    description: "Implement a recursive factorial function.",
-    examples: [
-      {
-        input: "5",
-        output: "120",
-      },
-    ],
-  },
-];
-```
-
----
-
-## Step 3 — Add the Solver
-
-```ts
-// src/problems/recursion/solvers.ts
-
-export function factorial(n: number): number {
-  if (n <= 1) return 1;
-
-  return n * factorial(n - 1);
+```ts id="8eq3sr"
+{
+  title: "Factorial Calculator",
+  category: Category.Calculator,
+  solverName: "solveFactorial",
+  inputs: [
+    {
+      id: "number",
+      label: "Enter a non-negative integer:",
+      type: InputType.Number,
+      placeholder: "5",
+      min: 0,
+      defaultValue: 5
+    }
+  ],
+  buttonText: "Calculate Factorial",
+  solver: Solvers.solveFactorial
 }
 ```
 
 ---
 
-## Step 4 — Add the Explanation
+## 4. Add Explanation
 
-```ts
-// src/problems/recursion/explanations.ts
-
-export const explanations = {
-  "recursion-001": `
-### Approach
-
-The function calls itself with a smaller value until
-it reaches the base case.
-
-### Complexity
-
-Time: O(n)
-Space: O(n)
+```ts id="gl4grf"
+export const CALCULATOR_EXPLANATIONS: Record<string, string> = {
+  solveFactorial: `
+The solver multiplies every integer from 2 through the
+input value and stores the running product in result.
 `,
 };
 ```
 
 ---
 
-## Step 5 — Register the Category
+## 5. Register the Category
 
-Update the central aggregation layer:
+If a new category is introduced:
 
-```text
+```text id="59h69w"
+types.ts
+   ↓
 src/problems/index.ts
+   ↓
+Category Directory
 ```
 
-The current repository uses a central registration/index pattern for problem discovery.
+The current README documents centralized category registration through `src/problems/index.ts`.
 
 ---
 
-## Step 6 — Verify
+## 6. Verify the Feature
 
 Run:
 
-```bash
+```bash id="8kiv18"
+npm run build
 npm run dev
 ```
 
-Then verify:
+Verify:
 
-```text
+```text id="8e6q98"
 ✓ Problem appears
-✓ Category appears
-✓ Explanation renders
-✓ Solver behaves correctly
-✓ Search/filter works
+✓ Correct category
+✓ Inputs render correctly
+✓ Valid input executes
+✓ Invalid input is handled
+✓ Search finds the problem
+✓ Solver source is visible
+✓ Explanation renders correctly
 ```
-
----
-
-# Example Problem Lifecycle
-
-```text
-New Problem
-     ↓
-Metadata
-     ↓
-Problem Definition
-     ↓
-Solver
-     ↓
-Explanation
-     ↓
-Registration
-     ↓
-UI Discovery
-     ↓
-Testing
-     ↓
-Review
-```
-
-This creates a predictable contribution workflow.
 
 ---
 
@@ -543,63 +658,36 @@ This creates a predictable contribution workflow.
 
 ## Frontend
 
-| Technology   | Responsibility                           |
-| ------------ | ---------------------------------------- |
-| React        | User interface                           |
-| TypeScript   | Type-safe application development        |
-| Vite         | Development and production build tooling |
-| Tailwind CSS | Styling                                  |
-| daisyUI      | UI components                            |
-| PostCSS      | CSS processing                           |
+| Technology     | Role                                       |
+| -------------- | ------------------------------------------ |
+| React 19       | Component-based UI                         |
+| TypeScript 5.8 | Type safety and domain contracts           |
+| Vite 6         | Development server and production bundling |
+| Tailwind CSS   | Utility-first styling                      |
 
-The repository currently identifies React, TypeScript, Vite, Tailwind CSS, PostCSS, and daisyUI in its stack.
+These are the primary technologies identified by the current repository documentation.
 
 ---
 
-## JavaScript Ecosystem
+## AI Integration
 
-| Technology | Purpose                          |
-| ---------- | -------------------------------- |
-| JavaScript | Core language being practiced    |
-| ECMAScript | Language standard reference      |
-| TypeScript | Type-safe JavaScript development |
-| Node.js    | Development/runtime ecosystem    |
+| Technology      | Role                        |
+| --------------- | --------------------------- |
+| `@google/genai` | Gemini-powered explanations |
 
----
-
-## Developer Tooling
-
-| Tool     | Purpose               |
-| -------- | --------------------- |
-| ESLint   | Static analysis       |
-| Prettier | Consistent formatting |
-| Git      | Version control       |
-
-The repository documents ESLint and Prettier as part of the development tooling.
+The AI integration is isolated through `geminiService.ts`.
 
 ---
 
-# Optional AI Integration
+## Tooling
 
-The repository includes a lightweight service wrapper:
-
-```text
-src/services/geminiService.ts
-```
-
-This is intended for experimental Google GenAI integration rather than making the entire application dependent on AI.
-
-That separation is useful because:
-
-```text
-UI
- ↓
-Service Abstraction
- ↓
-External AI Provider
-```
-
-If the provider changes later, the rest of the application can remain relatively isolated from that implementation detail.
+| Tool       | Purpose              |
+| ---------- | -------------------- |
+| TypeScript | Static type checking |
+| Vite       | Build tooling        |
+| ESLint     | Code quality         |
+| Prettier   | Formatting           |
+| Git        | Version control      |
 
 ---
 
@@ -609,11 +697,12 @@ If the provider changes later, the rest of the application can remain relatively
 
 Install:
 
-- Node.js
-- npm, pnpm, or Yarn
+- Node.js 18+
+- npm 9+
 - Git
+- Google Gemini API key for the explanation feature
 
-The project is built around a standard Vite-based frontend workflow.
+The project currently documents Node.js 18+ and npm 9+ as prerequisites.
 
 ---
 
@@ -621,317 +710,361 @@ The project is built around a standard Vite-based frontend workflow.
 
 Clone the repository:
 
-```bash
+```bash id="9fjmj1"
 git clone https://github.com/md-abu-kayser/js-solution-vault.git
 ```
 
-Enter the directory:
+Navigate to the project:
 
-```bash
+```bash id="ydu9mc"
 cd js-solution-vault
 ```
 
 Install dependencies:
 
-```bash
+```bash id="k0ofcc"
 npm install
 ```
 
 ---
 
+# Environment Configuration
+
+Create:
+
+```text id="4uk1ws"
+.env.local
+```
+
+Add:
+
+```env id="1w7pgi"
+VITE_GEMINI_API_KEY=your_gemini_api_key
+```
+
+The repository currently documents `VITE_GEMINI_API_KEY` as the required client-side configuration for the Gemini integration.
+
+## Security Note
+
+A `VITE_` environment variable is exposed to the frontend bundle.
+
+Therefore:
+
+> **Do not treat `VITE_GEMINI_API_KEY` as a secure server-side secret.**
+
+For a production deployment where the provider credential must remain private, the preferred architecture is:
+
+```text id="m91a4p"
+Browser
+   ↓
+Backend API
+   ↓
+Gemini
+```
+
+rather than:
+
+```text id="fbk9ab"
+Browser
+   ↓
+Gemini API
+```
+
+This repository's current setup is appropriate for its existing frontend-oriented integration, but the backend-proxy architecture is the stronger option for private credentials.
+
+---
+
 # Development
 
-Start the local development server:
+Start the development server:
 
-```bash
+```bash id="3j0knn"
 npm run dev
 ```
 
-Open the URL displayed by Vite, typically:
+Vite normally serves the application at:
 
-```text
+```text id="98qop5"
 http://localhost:5173
 ```
 
-The repository currently documents the standard Vite development command and local development URL.
+The exact URL printed by Vite should be treated as authoritative.
 
 ---
 
 # Production Build
 
-Create a production build:
+Create a production bundle:
 
-```bash
+```bash id="w4dshp"
 npm run build
 ```
 
-Preview it locally:
+Preview the production build locally:
 
-```bash
+```bash id="8r0yjq"
 npm run preview
 ```
 
-These are the documented Vite-based build and preview workflows.
+The current repository uses these commands for development, build, and local production preview.
 
 ---
 
 # Available Scripts
 
-| Command           | Purpose                  |
-| ----------------- | ------------------------ |
-| `npm run dev`     | Start development server |
-| `npm run build`   | Create production build  |
-| `npm run preview` | Preview production build |
+| Command           | Description                             |
+| ----------------- | --------------------------------------- |
+| `npm run dev`     | Start Vite development server           |
+| `npm run build`   | Type-check and create production bundle |
+| `npm run preview` | Serve the production bundle locally     |
 
-The current README identifies these scripts as the existing `package.json` workflow.
+These commands are documented in the current repository setup.
 
-For future tooling, additional scripts can be introduced:
+---
 
-```text
-npm run lint
-npm run format
-npm run typecheck
-npm run test
+# Quality Practices
+
+The project should maintain a clear separation between:
+
+```text id="ox54r4"
+UI State
+   ≠
+Problem Data
+   ≠
+Solver Logic
+   ≠
+External Services
+```
+
+This reduces coupling and makes individual pieces easier to reason about.
+
+---
+
+# Solver Quality Standards
+
+A good solver should:
+
+```text id="d1t3x6"
+✓ Validate assumptions
+✓ Produce deterministic results
+✓ Have a clear function signature
+✓ Avoid React-specific logic
+✓ Handle relevant edge cases
+✓ Remain independently testable
+✓ Prefer readable implementation
 ```
 
 ---
 
-# Testing & Quality
+# Error Handling
 
-The current repository documentation recommends introducing automated tests for solver functions.
+User input errors should provide actionable feedback.
 
-The most important testing boundary is the solver layer.
+Example:
 
-For example:
+```ts id="g1r1qn"
+if (!Number.isInteger(number) || number < 0) {
+  throw new Error("Enter a non-negative integer.");
+}
+```
 
-```ts
+The goal is to fail clearly rather than silently producing an unexpected result.
+
+---
+
+# Testing Strategy
+
+The repository's architecture makes solver-level testing straightforward.
+
+The recommended testing boundary is:
+
+```text id="u67ncc"
+Problem Definition
+       ↓
+Solver Function
+       ↓
+Expected Result
+```
+
+A future unit test can validate the solver without mounting React components.
+
+Example:
+
+```ts id="r8j3do"
+import { describe, expect, it } from "vitest";
 import { solveYourProblem } from "../src/problems/arrays/solvers";
 
 describe("solveYourProblem", () => {
-  it("handles the sample case", () => {
-    expect(solveYourProblem("input")).toEqual("expected");
+  it("returns the expected result", () => {
+    expect(solveYourProblem({ value: "10" })).toBe("expected");
   });
 });
 ```
 
 ---
 
-# Recommended Quality Pipeline
+# Testing Priorities
 
-As the repository matures:
+As the repository grows, prioritize:
 
-```text
-Lint
-  ↓
+### Correctness
+
+Does the solver return the expected result?
+
+### Edge Cases
+
+Does it handle:
+
+- Empty input
+- Minimum values
+- Maximum reasonable values
+- Invalid input
+- Duplicate values
+- Unexpected formatting
+
+where applicable?
+
+### Regression Safety
+
+Does a new change break an existing problem?
+
+### UI Integration
+
+Does the problem still render and execute correctly through the shared `ProblemCard`?
+
+---
+
+# Recommended Validation Pipeline
+
+A mature version of the repository should follow:
+
+```text id="td93cv"
 Type Check
-  ↓
+    ↓
+Lint
+    ↓
 Unit Tests
-  ↓
-Build
-  ↓
+    ↓
+Production Build
+    ↓
 Deploy
 ```
 
-Recommended commands:
+Recommended scripts:
 
-```bash
-npm run lint
+```bash id="klsekw"
 npm run typecheck
-npm run test
+npm run lint
+npm test
 npm run build
 ```
 
-Only add these commands after configuring the corresponding tools in `package.json`.
-
----
-
-# Testing Philosophy
-
-Tests should prioritize correctness over volume.
-
-Every solver should ideally cover:
-
-```text
-Normal Input
-     +
-Boundary Input
-     +
-Empty Input
-     +
-Invalid Input
-     +
-Large Input
-```
-
-where those cases are meaningful for the specific problem.
-
----
-
-# Complexity Analysis
-
-A future extension of the problem model should optionally record:
-
-```ts
-interface Complexity {
-  time: string;
-  space: string;
-}
-```
-
-Example:
-
-```text
-Time Complexity: O(n)
-Space Complexity: O(1)
-```
-
-This would make the repository more valuable for technical interview preparation and algorithm review.
+Only introduce scripts that are actually configured in `package.json`.
 
 ---
 
 # Performance Considerations
 
-As the problem library grows, loading every problem into the initial application bundle may become unnecessary.
+The architecture already includes a few practical performance considerations.
 
-Potential improvements include:
+## Debounced Search
 
-### Lazy Loading
+Title search waits 300 ms before filtering.
 
-Load category data only when the user opens that category.
+## Shared Components
 
-### Code Splitting
+A reusable `ProblemCard` avoids creating separate rendering logic for every problem.
 
-Split large feature areas into separate bundles.
+## Data-Driven Content
 
-### Search Optimization
-
-Use indexed metadata rather than repeatedly scanning large datasets.
-
-### Memoization
-
-Memoize expensive filtering and transformation operations.
-
-### Content Chunking
-
-Keep problem definitions, explanations, and solver payloads modular.
+Problem metadata is separated from the UI so the application can scale its problem library without multiplying component implementations.
 
 ---
 
-# Scalability Direction
+# Future Performance Improvements
 
-The current architecture can evolve from:
+As the catalog grows significantly, consider:
 
-```text
-Single Frontend
-      ↓
-Problem Data
+```text id="z3zxhl"
+Lazy-load problem categories
+        ↓
+Split large content modules
+        ↓
+Optimize search indexing
+        ↓
+Memoize expensive derived data
+        ↓
+Virtualize very large problem lists
 ```
 
-toward:
-
-```text
-                    Web App
-                       │
-                 ┌─────┴─────┐
-                 ▼           ▼
-            Problem API   AI Service
-                 │           │
-                 ▼           ▼
-             Database    AI Provider
-```
-
-This would support:
-
-- User accounts
-- Progress persistence
-- Favorites
-- Problem history
-- Leaderboards
-- Personalized practice
-- Remote problem delivery
-- Community submissions
+These are future optimization opportunities rather than claims about the current implementation.
 
 ---
 
-# Future Product Model
+# Deployment
 
-A more advanced version could evolve into:
+Because the application is built with Vite, the production output can be deployed as a static frontend.
 
-```text
-                     Learner
-                        │
-                        ▼
-                 Problem Platform
-                        │
-         ┌──────────────┼──────────────┐
-         ▼              ▼              ▼
-      Practice       Progress          AI
-         │              │              │
-         └──────────────┼──────────────┘
-                        ▼
-               Personalized Learning
+Build:
+
+```bash id="xj4lx0"
+npm run build
 ```
 
-That would transform the repository from a static solution library into a more complete learning platform.
+Output:
+
+```text id="j1jdy3"
+dist/
+```
+
+Potential deployment targets include:
+
+- GitHub Pages
+- Vercel
+- Netlify
+- Cloudflare Pages
 
 ---
 
-# Roadmap
+# GitHub Pages Deployment Model
 
-```text
-[x] Categorized problem library
-[x] Canonical solutions
-[x] Human-readable explanations
-[x] Interactive problem browsing
-[x] Responsive UI foundation
-[x] Vite development workflow
-[x] Service abstraction for experimental GenAI
-
-[ ] Expand problem coverage
-[ ] Add difficulty-based practice sessions
-[ ] Add progress tracking
-[ ] Add bookmarks / favorites
-[ ] Add automated unit tests
-[ ] Add TypeScript strict validation
-[ ] Add ESLint configuration
-[ ] Add Prettier configuration
-[ ] Add GitHub Actions CI
-[ ] Add algorithm complexity metadata
-[ ] Add interactive algorithm visualizations
-[ ] Add contributor workflow
-[ ] Add remote problem API
-[ ] Add community-submitted problems
+```text id="il47sp"
+Git Push
+   ↓
+GitHub Actions
+   ↓
+npm ci
+   ↓
+npm run build
+   ↓
+dist/
+   ↓
+GitHub Pages
 ```
 
-The roadmap builds naturally on the repository's existing direction toward searchability, contributions, visual learning, progress tracking, and expanded problem capabilities.
+A future CI workflow can automate this process.
 
 ---
 
-# GitHub Actions / CI Direction
+# CI/CD Direction
 
-A professional repository should eventually validate changes automatically.
+Recommended checks for every pull request:
 
-Recommended CI flow:
-
-```text
-Pull Request
-     ↓
-Install Dependencies
-     ↓
+```text id="m9swd9"
+Install
+  ↓
 Type Check
-     ↓
+  ↓
 Lint
-     ↓
+  ↓
 Test
-     ↓
+  ↓
 Build
-     ↓
-Pass / Fail
 ```
 
 Example future workflow:
 
-```yaml
+```yaml id="9io3mu"
 name: CI
 
 on:
@@ -943,80 +1076,206 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: lts/*
           cache: npm
 
-      - name: Install
-        run: npm ci
-
-      - name: Type Check
-        run: npm run typecheck
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Test
-        run: npm test
-
-      - name: Build
-        run: npm run build
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
 ```
 
-Add this once the corresponding scripts exist.
+This should be added only after the associated project scripts exist.
 
 ---
 
-# Contribution Guidelines
+# Accessibility Considerations
 
-Contributions are welcome.
+A professional frontend should treat accessibility as part of the component contract.
 
-## Before Contributing
+Future quality gates should cover:
 
-Please:
+```text id="7n7dj4"
+Keyboard navigation
+Semantic HTML
+Visible focus states
+Accessible labels
+Color contrast
+Screen-reader-friendly controls
+Responsive interaction
+```
 
-```text
-Read architecture
-      ↓
-Understand category structure
-      ↓
-Follow existing naming
-      ↓
-Add implementation
-      ↓
-Add explanation
-      ↓
-Add tests where applicable
-      ↓
-Run validation
-      ↓
-Open PR
+These should be verified as the UI evolves.
+
+---
+
+# Security Considerations
+
+## API Keys
+
+Never commit real Gemini credentials.
+
+Use:
+
+```text id="9fu93c"
+.env.local
+```
+
+and keep it out of source control.
+
+## Client-Side Secrets
+
+Do not assume frontend environment variables are private.
+
+For sensitive production credentials, use:
+
+```text id="c7elkb"
+Client
+  ↓
+Backend
+  ↓
+Provider
+```
+
+## External Input
+
+All user-entered values should be treated as untrusted input and validated before being passed to solver logic.
+
+---
+
+# Engineering Decisions
+
+## Why Separate Solvers?
+
+Because solver logic is the reusable core of every exercise.
+
+```text id="w2m2dg"
+UI
+ │
+ └── calls solver
+        │
+        └── returns result
+```
+
+This allows the same solver to eventually be reused by:
+
+- Unit tests
+- Benchmarks
+- CLI tools
+- APIs
+- Other UI implementations
+
+---
+
+## Why Separate Explanations?
+
+Because explanation is educational content, not application rendering logic.
+
+This makes it possible to:
+
+```text id="5lbx0e"
+Change UI
+without rewriting explanations
+```
+
+and:
+
+```text id="s7m3n0"
+Improve explanations
+without modifying solver logic
 ```
 
 ---
 
-# New Problem Contribution Standard
+## Why Use a Service Boundary?
 
-A new problem should ideally contain:
+External providers should not be deeply coupled to components.
 
-```text
-✓ Unique ID
-✓ Clear title
-✓ Difficulty
-✓ Precise problem statement
-✓ Example input/output
-✓ Canonical solver
-✓ Explanation
-✓ Edge-case considerations
-✓ Tests
+Current structure:
+
+```text id="fah0g3"
+ProblemCard / UI
+       ↓
+geminiService.ts
+       ↓
+Google Gemini
 ```
 
-This ensures that a new contribution improves the learning resource rather than merely increasing problem count.
+This creates a clear integration boundary.
+
+---
+
+# Adding a New Category
+
+When the existing categories are no longer sufficient:
+
+```text id="q3j9z7"
+1. Add enum/category definition
+2. Create category directory
+3. Add problems.ts
+4. Add solvers.ts
+5. Add explanations.ts
+6. Register in index.ts
+7. Verify navigation
+8. Verify counts
+9. Verify search
+10. Build
+```
+
+This follows the current repository's centralized aggregation approach.
+
+---
+
+# Contribution Workflow
+
+Contributions should be small, focused, and easy to review.
+
+```text id="vsqgpt"
+Issue / Idea
+     ↓
+Create Branch
+     ↓
+Implement
+     ↓
+Add / Update Content
+     ↓
+Validate
+     ↓
+Commit
+     ↓
+Pull Request
+     ↓
+Review
+```
+
+---
+
+# Branch Naming
+
+Recommended:
+
+```text id="5weuv8"
+feature/add-recursion-problems
+fix/search-filter
+refactor/problem-model
+docs/readme-update
+test/solver-coverage
+```
+
+Avoid:
+
+```text id="f7h5d8"
+new
+test
+changes
+final
+branch1
+```
 
 ---
 
@@ -1026,290 +1285,263 @@ Use Conventional Commit-style messages.
 
 Examples:
 
-```text
-feat(problems): add string manipulation challenges
-fix(solvers): correct array edge-case handling
-refactor(problems): normalize problem metadata
-docs(readme): improve repository documentation
-test(solvers): add coverage for recursive problems
+```text id="s2v5w6"
+feat(problems): add recursion category
+fix(search): correct debounced filtering
+refactor(solvers): normalize input handling
+docs(readme): improve architecture documentation
+test(solvers): add edge case coverage
 chore(deps): update frontend dependencies
-ci(github): add build validation workflow
-```
-
-Avoid vague messages such as:
-
-```text
-update
-changes
-final
-new stuff
-fix
+ci(github): add build validation
 ```
 
 ---
 
-# Code Style
+# Pull Request Checklist
 
-Follow these principles:
+Before opening a PR:
 
-### Prefer Readability
-
-The simplest understandable solution is often the best reference implementation.
-
-### Avoid Unnecessary Abstraction
-
-Do not introduce complex architecture merely for demonstration.
-
-### Keep Solvers Focused
-
-A solver should solve one problem.
-
-### Keep UI Independent
-
-Problem content should not be hard-coded into presentation components.
-
-### Use Types Intentionally
-
-TypeScript should improve correctness and developer experience.
-
-### Document Non-Obvious Decisions
-
-Comments should explain reasoning, not restate obvious code.
-
----
-
-# Security Considerations
-
-The project includes an optional external AI service integration.
-
-Never commit actual API credentials:
-
-```text
-.env
-.env.local
-.env.production
-```
-
-Use an environment example file:
-
-```text
-.env.example
-```
-
-For browser applications, remember that client-side environment variables are not equivalent to server-side secrets.
-
-If sensitive AI credentials are required in the future, route those requests through a trusted backend service rather than exposing private credentials directly to the browser.
-
----
-
-# Deployment
-
-The application is built as a Vite frontend and produces a static build.
-
-Typical process:
-
-```bash
-npm run build
-```
-
-The resulting:
-
-```text
-dist/
-```
-
-directory can be deployed to a static hosting platform.
-
-Potential platforms include:
-
-- GitHub Pages
-- Vercel
-- Netlify
-- Cloudflare Pages
-
-The current repository documentation describes deployment of the Vite `dist/` output to static hosting platforms.
-
----
-
-# Troubleshooting
-
-## Development Server Does Not Start
-
-Try:
-
-```bash
-rm -rf node_modules
-npm install
-npm run dev
-```
-
-On Windows PowerShell:
-
-```powershell
-Remove-Item -Recurse -Force node_modules
-npm install
-npm run dev
-```
-
----
-
-## Build Failure
-
-Run:
-
-```bash
-npm install
-npm run build
-```
-
-Then inspect:
-
-- TypeScript errors
-- Import paths
-- Missing dependencies
-- Incorrect exports
-
----
-
-## New Problem Does Not Appear
-
-Check:
-
-```text
-[ ] problems.ts exists
-[ ] solver is exported
-[ ] explanation is registered
-[ ] category is registered
-[ ] problem ID is unique
-[ ] app was restarted after structural changes
-```
-
----
-
-# Project Quality Checklist
-
-Before merging a significant change:
-
-```text
-[ ] Problem metadata is correct
-[ ] Solver is deterministic
-[ ] Explanation matches implementation
-[ ] Edge cases considered
-[ ] TypeScript passes
-[ ] Lint passes
-[ ] Tests pass
+```text id="6kyczt"
+[ ] Change is focused
+[ ] Naming follows existing conventions
+[ ] New problem follows the content model
+[ ] Solver is validated
+[ ] Explanation is included
+[ ] Search works
+[ ] UI remains responsive
 [ ] Build passes
-[ ] README updated when architecture changes
-[ ] No secrets committed
+[ ] Documentation is updated where necessary
+[ ] No secrets are committed
+```
+
+---
+
+# Roadmap
+
+## Content
+
+```text id="t70cih"
+[ ] Expand problem library
+[ ] Add difficulty metadata
+[ ] Add tags
+[ ] Add complexity analysis
+[ ] Add multiple solution strategies
+[ ] Add edge-case documentation
+```
+
+## Learning
+
+```text id="v8iw14"
+[ ] Progress tracking
+[ ] Favorites / bookmarks
+[ ] Practice sessions
+[ ] Difficulty-based filtering
+[ ] Personalized recommendations
+[ ] Learning streaks
+```
+
+## Engineering
+
+```text id="aqdmpc"
+[ ] Automated unit tests
+[ ] Type-checking CI
+[ ] ESLint CI
+[ ] Build validation
+[ ] Automated deployment
+[ ] Solver benchmark suite
+```
+
+## AI
+
+```text id="inw1s7"
+[ ] Better problem-context prompting
+[ ] Structured explanation format
+[ ] Hint mode
+[ ] Progressive hints
+[ ] Server-side AI proxy
+[ ] AI-assisted solution comparison
+```
+
+The roadmap extends the existing project direction around richer problem discovery, testing, CI, AI integration, and interactive learning.
+
+---
+
+# Long-Term Product Direction
+
+The platform can evolve from a solution library into a personalized practice system.
+
+```text id="3kzazv"
+Problem Library
+      ↓
+User Attempts
+      ↓
+Progress Tracking
+      ↓
+Skill Model
+      ↓
+Difficulty Recommendation
+      ↓
+Personalized Practice
+      ↓
+AI Coaching
+```
+
+A future architecture could therefore look like:
+
+```text id="bim3m5"
+                     Web Client
+                         │
+             ┌───────────┴───────────┐
+             ▼                       ▼
+       Problem API              AI Gateway
+             │                       │
+             ▼                       ▼
+         Database               AI Provider
+             │
+             ▼
+      Progress / Analytics
+```
+
+---
+
+# Repository Quality Standards
+
+The repository should aim to maintain:
+
+```text id="wo2e8z"
+✓ Predictable architecture
+✓ Strong TypeScript contracts
+✓ Reusable UI components
+✓ Independent solver logic
+✓ Consistent content structure
+✓ Explicit validation
+✓ Clear error messages
+✓ Secure configuration
+✓ Reproducible builds
+✓ Meaningful commit history
+✓ Reviewable pull requests
+✓ Up-to-date documentation
 ```
 
 ---
 
 # What This Repository Demonstrates
 
-From a portfolio perspective, JS SolutionVault demonstrates several engineering capabilities.
+From a professional portfolio perspective, JS SolutionVault demonstrates more than problem solving.
 
-## Problem Solving
+## Frontend Engineering
 
-Ability to translate requirements into executable solutions.
+- React component architecture
+- Responsive UI
+- Reusable components
+- State-driven rendering
+- Search and filtering
+- Theme management
 
-## JavaScript Knowledge
+## TypeScript Engineering
 
-Exposure to practical JavaScript concepts and patterns.
+- Shared domain contracts
+- Typed problem metadata
+- Typed function boundaries
+- Reusable interfaces
 
-## TypeScript
+## Software Architecture
 
-Use of static typing to improve maintainability.
-
-## React
-
-Building reusable interactive UI components.
-
-## Data-Driven Architecture
-
-Separating content from presentation.
-
-## Service Abstraction
-
-Keeping external integrations behind dedicated services.
+- Separation of UI and domain content
+- Data-driven rendering
+- Service abstraction
+- Centralized problem registration
 
 ## Developer Experience
 
-Using Vite, linting, formatting, Git workflows, and structured documentation.
+- Vite-based development workflow
+- Structured repository layout
+- Reusable contribution patterns
+- Documentation-driven onboarding
+
+## AI Integration
+
+- External AI service isolation
+- Context-aware explanation workflow
+- Markdown-based AI output rendering
 
 ---
 
-# Ideal Use Cases
+# Why This Repository Is Useful
 
-### Interview Preparation
+The repository provides a practical intersection of:
 
-Practice implementation and explain solution reasoning.
-
-### JavaScript Learning
-
-Study the relationship between concepts and working code.
-
-### TypeScript Practice
-
-Compare typed implementations and contracts.
-
-### Code Review
-
-Use the repository as a compact set of reviewable examples.
-
-### Portfolio Showcase
-
-Demonstrate structured frontend architecture and problem-solving ability.
-
-### Open Source
-
-Provide an extensible foundation for community-contributed challenges.
-
----
-
-# Engineering Philosophy
-
-The repository follows a simple rule:
-
-> **A solution is not complete until it is understandable.**
-
-That means the project values:
-
-```text
-Correctness
-    +
-Clarity
-    +
-Explanation
-    +
-Testability
-    +
-Maintainability
+```text id="y1oh43"
+JavaScript Practice
+        +
+TypeScript
+        +
+React
+        +
+Interactive UX
+        +
+AI Integration
+        +
+Software Architecture
 ```
 
-rather than raw problem count alone.
+That combination makes it useful as both a learning tool and an engineering portfolio project.
 
 ---
 
-# Repository Evolution
+# Current Scope
 
-The long-term direction can be represented as:
+The project currently focuses on a frontend-first interactive problem-solving experience.
 
-```text
-Solution Library
-      ↓
-Interactive Problem Platform
-      ↓
-Progress Tracking
-      ↓
-Personalized Practice
-      ↓
-Community Contributions
-      ↓
-Learning Platform
+Its current architecture is intentionally lightweight:
+
+```text id="zsp1ii"
+React
+  +
+TypeScript
+  +
+Vite
+  +
+Structured Problem Data
+  +
+Gemini Service
 ```
 
-Each stage can be introduced incrementally without abandoning the existing content architecture.
+Persistent accounts, server-side APIs, full progress storage, and production-grade backend infrastructure are future architectural directions rather than assumptions about the current implementation.
+
+---
+
+# Documentation Resources
+
+## JavaScript
+
+- [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [ECMAScript Specification](https://tc39.es/ecma262/)
+
+## TypeScript
+
+- [TypeScript Documentation](https://www.typescriptlang.org/docs/)
+
+## React
+
+- [React Documentation](https://react.dev/)
+
+## Vite
+
+- [Vite Documentation](https://vite.dev/)
+
+## Styling
+
+- [Tailwind CSS](https://tailwindcss.com/docs/)
+
+## AI
+
+- [Google AI Developer Documentation](https://ai.google.dev/)
+
+## Tooling
+
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
 
 ---
 
@@ -1317,7 +1549,7 @@ Each stage can be introduced incrementally without abandoning the existing conte
 
 This project is licensed under the **MIT License**.
 
-See [LICENSE](./LICENSE) for the complete license text.
+See the [LICENSE](./LICENSE) file for the complete license text.
 
 ---
 
@@ -1341,26 +1573,7 @@ See [LICENSE](./LICENSE) for the complete license text.
   </a>
 </p>
 
-For collaboration, technical discussion, portfolio review, or professional opportunities, please reach out through GitHub or email.
-
----
-
-# Acknowledgments
-
-This project builds on the JavaScript and TypeScript ecosystem, including:
-
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- daisyUI
-- Node.js
-- Express
-- Google GenAI
-- ESLint
-- Prettier
-
-The repository's existing documentation references these technologies and their official documentation as development resources.
+For collaboration, technical discussion, portfolio reviews, or professional opportunities, please reach out through GitHub or email.
 
 ---
 
@@ -1369,9 +1582,9 @@ The repository's existing documentation references these technologies and their 
 </p>
 
 <p align="center">
-  <strong>Practice. Understand. Implement. Explain.</strong>
+  <strong>Practice. Execute. Understand. Improve.</strong>
 </p>
 
 <p align="center">
-  Made with ❤️ and ☕ by <strong>Md Abu Kayser</strong>
+  Built with React, TypeScript, Vite, and a curiosity for better JavaScript.
 </p>
