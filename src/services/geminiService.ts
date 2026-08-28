@@ -1,16 +1,6 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-
-if (!apiKey) {
-  throw new Error(
-    "VITE_GEMINI_API_KEY is missing. Please add it to your .env file.",
-  );
-}
-
-const ai = new GoogleGenAI({
-  apiKey,
-});
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY! });
 
 /**
  * Fetches an explanation for a given JavaScript solver function from the Gemini API.
@@ -37,14 +27,14 @@ export const getExplanation = async (
       \`\`\`
 
       Your explanation should be:
-      1. **Clear and concise:** Easy for an intermediate JS developer to understand.
-      2. **Step-by-step:** Break down the logic.
-      3. **Use Markdown:** Use **bold** for emphasis and \`code\` for inline code snippets or variable names. Do not use headers. Start directly with the explanation.
-      4. **Focus on the "how" and "why":** Explain the purpose of key lines or blocks of code.
+      1.  **Clear and concise:** Easy for an intermediate JS developer to understand.
+      2.  **Step-by-step:** Break down the logic.
+      3.  **Use Markdown:** Use **bold** for emphasis and \`code\` for inline code snippets or variable names. Do not use headers. Start directly with the explanation.
+      4.  **Focus on the "how" and "why":** Explain the purpose of key lines or blocks of code.
     `;
 
     const response = await ai.models.generateContent({
-      model,
+      model: model,
       contents: prompt,
     });
 
